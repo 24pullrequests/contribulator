@@ -9,11 +9,6 @@ class Project < ActiveRecord::Base
     "#{owner}/#{name}"
   end
 
-  def language
-    main_language
-    # Linguist::Language[main_language]
-  end
-
   def update_from_github
     update_attributes(
       github_id:     repo[:id],

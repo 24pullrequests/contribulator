@@ -11,9 +11,9 @@
         </p>
       <% end %>
       <%= project.score %>
-      <% if project.language.present? %>
+      <% if project.main_language.present? %>
       <p>
-        <%= project.language %>
+        <%= project.main_language %>
       </p>
       <% end %>
       <% if project.fork %>
