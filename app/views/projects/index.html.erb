@@ -1,0 +1,31 @@
+<h2>Projects</h2>
+<ul>
+  <% @projects.each do |project| %>
+    <li>
+      <h3>
+        <%= link_to project.name_with_owner, project %>
+      </h3>
+      <% if project.description.present? %>
+        <p>
+          <%= truncate project.description, :length => 200 %>
+        </p>
+      <% end %>
+      <%= project.score %>
+      <% if project.language.present? %>
+      <p style="color:<%= project.language.color %>;">
+        <%= project.language %>
+      </p>
+      <% end %>
+      <% if project.fork %>
+        <p>
+          fork
+        </p>
+      <% end %>
+      <% if project.homepage.present? %>
+      <p>
+        <%= link_to project.homepage, project.homepage %>
+      </p>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
