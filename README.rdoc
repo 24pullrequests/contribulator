@@ -1,28 +1,19 @@
-== README
+# Contribulator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+/projects from 24pullrequests
 
-Things you may want to cover:
+Score projects on how good they are to contribute to
 
-* Ruby version
+/
 
-* System dependencies
+  List of projects ordered by score desc
 
-* Configuration
+  Filter by language
 
-* Database creation
+/:user/:repo
 
-* Database initialization
+  score calculation
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  open issues
+```
