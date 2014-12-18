@@ -10,7 +10,8 @@ class Project < ActiveRecord::Base
   end
 
   def language
-    Linguist::Language[main_language]
+    main_language
+    # Linguist::Language[main_language]
   end
 
   def update_from_github
