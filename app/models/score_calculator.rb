@@ -12,7 +12,7 @@ class ScoreCalculator
       homepage_present? ? 1 : 0,
       readme_present? ? 5 : 0,
       contributing_present? ? 5 : 0,
-      licence_present? ? 5 : 0,
+      license_present? ? 5 : 0,
       changelog_present? ? 1 : 0,
       tests_present? ? 5 : 0
     ].sum
@@ -25,7 +25,7 @@ class ScoreCalculator
       homepage_present: homepage_present?,
       readme_present: readme_present?,
       contributing_present: contributing_present?,
-      licence_present: licence_present?,
+      license_present: license_present?,
       changelog_present: changelog_present?,
       tests_present: tests_present?
     }
@@ -53,8 +53,8 @@ class ScoreCalculator
     file_exists?('contributing')
   end
 
-  def licence_present?
-    file_exists?('licence')
+  def license_present?
+    file_exists?('license')
   end
 
   def changelog_present?
