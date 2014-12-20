@@ -9,6 +9,11 @@ class Project < ActiveRecord::Base
     "#{owner}/#{name}"
   end
 
+  def update_info
+    update_from_github
+    update_score
+  end
+
   def update_from_github
     update_attributes(
       github_id:     repo[:id],
@@ -21,22 +26,17 @@ class Project < ActiveRecord::Base
     )
   end
 
-  def calculate_score
-    # number of open issues created in the past 6 month
-    # number of commits on main branch  in the past 6 month
-    # fork?
-    # description present?
-    # homepage present?
-    # readme present?
-    # Contributing present?
-    # Licence present?
-    # Changelog present?
-    # Tests (test/spec) present?
+  def update_score
+    update_attributes score: ScoreCalculator.new(self).score
+  end
+
+  def repo_id
+    github_id || name_with_owner
   end
 
   private
 
   def repo
-    @repo ||= Octokit.repo(github_id || name_with_owner)
+    @repo ||= Octokit.repo(repo_id)
   end
 end
