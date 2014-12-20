@@ -27,6 +27,10 @@ class Project < ActiveRecord::Base
     github_id || name_with_owner
   end
 
+  def summary
+    calculator.summary
+  end
+
   private
 
   def update_from_github
@@ -42,9 +46,13 @@ class Project < ActiveRecord::Base
   end
 
   def update_score
-    update_attributes score: ScoreCalculator.new(self).score
+    update_attributes score: calculator.score
   end
-  
+
+  def calculator
+    @calculator ||= ScoreCalculator.new(self)
+  end
+
   def repo
     @repo ||= Octokit.repo(repo_id)
   end
