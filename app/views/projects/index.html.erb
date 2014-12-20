@@ -4,13 +4,13 @@
     <li>
       <h3>
         <%= link_to project.name_with_owner, project %>
+         - <%= project.score %>
       </h3>
       <% if project.description.present? %>
         <p>
           <%= truncate project.description, :length => 200 %>
         </p>
       <% end %>
-      <%= project.score %>
       <% if project.main_language.present? %>
       <p>
         <%= project.main_language %>
