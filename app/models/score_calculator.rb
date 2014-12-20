@@ -58,7 +58,7 @@ class ScoreCalculator
   end
 
   def changelog_present?
-    file_exists?('changelog')
+    file_exists?('change')
   end
 
   def tests_present?
