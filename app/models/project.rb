@@ -1,6 +1,8 @@
 class Project < ActiveRecord::Base
   validates :name, :owner, presence: true
 
+  after_create :update_info
+
   def to_s
     name_with_owner
   end
