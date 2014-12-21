@@ -85,10 +85,10 @@ class ScoreCalculator
   end
 
   def file_exists?(name)
-    files.find { |f| f.match(/#{name}/i) }
+    files.find { |f| f.match(/#{name}/i) }.present?
   end
 
   def folder_exists?(name)
-    folders.find { |f| f.match(/#{name}/i) }
+    folders.find { |f| f.match(/#{name}/i) }.present?
   end
 end
