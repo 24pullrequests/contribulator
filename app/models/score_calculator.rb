@@ -27,7 +27,9 @@ class ScoreCalculator
       contributing_present: contributing_present?,
       license_present: license_present?,
       changelog_present: changelog_present?,
-      tests_present: tests_present?
+      tests_present: tests_present?,
+      open_issues_last_6_months: open_issues_created_since((Date.today - 6.months).to_time.iso8601),
+      master_commits_last_6_months: commits_since((Date.today - 6.months).to_time.iso8601, :master)
     }
   end
 
@@ -65,8 +67,13 @@ class ScoreCalculator
     folder_exists?('test') || folder_exists?('spec')
   end
 
-  # number of open issues created in the past 6 month
-  # number of commits on main branch  in the past 6 month
+  def open_issues_created_since(date)
+    github_client.list_issues(project.repo_id, since: date).count
+  end
+
+  def commits_since(date, branch)
+    github_client.commits(project.repo_id, branch, since: date).count
+  end
 
   def github_client
     Octokit
