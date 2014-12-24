@@ -80,7 +80,7 @@ class ScoreCalculator
   end
 
   def github_client
-    Octokit
+    project.github_client
   end
 
   def ls

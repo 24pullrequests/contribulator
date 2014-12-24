@@ -35,6 +35,10 @@ class Project < ActiveRecord::Base
     calculator.summary
   end
 
+  def github_client
+    @client ||= Octokit::Client.new(access_token: ENV['OCTOKIT_TOKEN'])
+  end
+
   private
 
   def update_from_github
@@ -58,6 +62,6 @@ class Project < ActiveRecord::Base
   end
 
   def repo
-    @repo ||= Octokit.repo(repo_id)
+    @repo ||= github_client.repo(repo_id)
   end
 end
