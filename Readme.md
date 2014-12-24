@@ -1,6 +1,8 @@
 # Contribulator
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/andrew/contribulator?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/andrew/contribulator.svg?branch=master)](https://travis-ci.org/andrew/contribulator)
+[![Dependency Status](https://img.shields.io/gemnasium/andrew/contribulator.svg?style=flat)](https://gemnasium.com/contribulator/contribulator)
+[![Gitter chat](http://img.shields.io/badge/gitter-andrew--contribulator-brightgreen.svg?style=flat)](https://gitter.im/andrew/contribulator)
 
 Extracted from http://24pullrequests.com/projects
 
