@@ -18,6 +18,10 @@ class Project < ActiveRecord::Base
     "#{owner}/#{name}"
   end
 
+  def github_url
+    "https://github.com/#{name_with_owner}"
+  end
+
   def update_info
     update_from_github
     update_score

@@ -3,8 +3,8 @@
   <% @projects.each do |project| %>
     <li>
       <h3>
-        <%= link_to project.name_with_owner, project %>
-         - <%= project.score %>
+        <%= link_to project.name_with_owner, project.github_url %>
+         - <%= link_to project.score, project %>
       </h3>
       <% if project.description.present? %>
         <p>
