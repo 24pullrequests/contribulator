@@ -15,6 +15,17 @@
     <%= link_to 'Contribulator', root_path %>
   </h1>
 
+  <% if logged_in? %>
+    <h2>
+      Welcome back <%= current_user.nickname %>
+      <%= link_to 'logout', logout_path %>
+    </h2>
+  <% else %>
+    <h2>
+      <%= link_to 'login', login_path %>
+    </h2>
+  <% end %>
+
   <%= yield %>
 </div>
 
