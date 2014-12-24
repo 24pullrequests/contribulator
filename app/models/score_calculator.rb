@@ -71,12 +71,12 @@ class ScoreCalculator
 
   def open_issues_created_since(date)
     date_since = (Date.today - date).to_time.iso8601
-    github_client.list_issues(project.repo_id, since: date_since).count
+    github_client.list_issues(project.repo_id).count
   end
 
   def commits_since(date, branch)
     date_since = (Date.today - date).to_time.iso8601
-    github_client.commits(project.repo_id, branch, since: date_since).count
+    github_client.commits(project.repo_id, branch).count
   end
 
   def github_client
