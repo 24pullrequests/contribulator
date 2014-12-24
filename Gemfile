@@ -9,3 +9,4 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'spring',        group: :development
 gem 'octokit'
+gem 'bootstrap-sass', '~> 3.3.1'
