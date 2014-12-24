@@ -4,10 +4,18 @@ class Project < ActiveRecord::Base
   after_create :update_info
 
   def self.create_from_github_url(url)
+    create parse_github_url(url)
+  end
+
+  def self.find_from_github_url(url)
+    find_by parse_github_url(url)
+  end
+
+  def self.parse_github_url(url)
     url.gsub!(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '')
     url.gsub!(/(\.git|\/)$/i, '')
     parts = url.split('/')
-    create owner: parts[0], name: parts[1]
+    { owner: parts[0], name: parts[1] }
   end
 
   def to_s
