@@ -16,7 +16,7 @@ class ScoreCalculator
       changelog_present? ? 1 : 0,
       tests_present? ? 5 : 0,
       open_issues_created_since(6.months) > 10 ? 5 : 0,
-      commits_since(6.months, :master) > 10 ? 5 : 0
+      commits_since(6.months) > 10 ? 5 : 0
     ].sum
   end
 
