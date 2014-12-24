@@ -10,3 +10,4 @@ gem 'turbolinks'
 gem 'spring',        group: :development
 gem 'octokit'
 gem 'bootstrap-sass', '~> 3.3.1'
+gem 'rest_client'
