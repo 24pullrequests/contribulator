@@ -31,7 +31,7 @@ class ScoreCalculator
       changelog_present: changelog_present?,
       tests_present: tests_present?,
       open_issues_last_6_months: open_issues_created_since(6.months),
-      master_commits_last_6_months: commits_since(6.months, :master)
+      master_commits_last_6_months: commits_since(6.months)
     }
   end
 
@@ -74,9 +74,9 @@ class ScoreCalculator
     github_client.list_issues(project.repo_id).count
   end
 
-  def commits_since(date, branch)
+  def commits_since(date)
     date_since = (Date.today - date).to_time.iso8601
-    github_client.commits(project.repo_id, branch).count
+    github_client.commits(project.repo_id).count
   end
 
   def github_client
