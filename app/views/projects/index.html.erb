@@ -1,35 +1,30 @@
-<h2>Projects</h2>
-<h3>
-  <%= link_to 'New project', new_project_path %>
-</h3>
+<div class='row'>
+  <div class='col-md-8'>
+    <h2>Projects</h2>
+  </div>
+  <div class='col-md-4'>
+    <%= link_to 'Add a Project', new_project_path, class: 'btn btn-primary' %>
+  </div>
+</div>
 
-<ul>
-  <% @projects.each do |project| %>
-    <li>
-      <h3>
-        <%= link_to project.name_with_owner, project.github_url %>
-         - <%= link_to project.score, project %>
-      </h3>
-      <% if project.description.present? %>
-        <p>
-          <%= truncate project.description, :length => 200 %>
-        </p>
+<div class='row'>
+  <div class='col-md-8'>
+    <ul>
+      <%= render @projects %>
+    </ul>
+  </div>
+
+  <div class='col-md-4'>
+    <ul>
+      <% @languages.each do |language| %>
+      <li>
+        <% if language == params[:language] %>
+          <%= language %>
+        <% else %>
+          <%= link_to language, root_path(language: language) %>
+        <% end %>
+      </li>
       <% end %>
-      <% if project.main_language.present? %>
-      <p>
-        <%= project.main_language %>
-      </p>
-      <% end %>
-      <% if project.fork %>
-        <p>
-          fork
-        </p>
-      <% end %>
-      <% if project.homepage.present? %>
-      <p>
-        <%= link_to project.homepage, project.homepage %>
-      </p>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+    </ul>
+  </div>
+</div>
