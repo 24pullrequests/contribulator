@@ -13,4 +13,12 @@ namespace :projects do
       end
     end
   end
+
+  desc 'Re-calculate project scores'
+  task recalculate_scores: :environment do
+    Project.all.each do |project|
+      calculator = ScoreCalculator.new(project)
+      project.update_attribute(:score, calculator.score)
+    end
+  end
 end
