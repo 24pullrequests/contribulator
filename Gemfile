@@ -21,5 +21,7 @@ group :development, :test do
 end
 
 group :production do
+  gem 'foreman'
+  gem 'unicorn'
   gem 'rails_12factor'
 end
