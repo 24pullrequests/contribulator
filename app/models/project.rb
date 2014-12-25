@@ -5,6 +5,12 @@ class Project < ActiveRecord::Base
 
   MINIMUM_SCORE = 15
 
+  scope :good, -> { where('score >= ?', Project::MINIMUM_SCORE) }
+
+  def self.languages
+    select('DISTINCT main_language').map(&:main_language).compact.sort
+  end
+
   def self.create_from_github_url(url)
     create parse_github_url(url)
   end
