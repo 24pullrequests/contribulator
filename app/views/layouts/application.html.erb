@@ -9,20 +9,26 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="container">
-      <div class='row'>
-        <div class='col-md-8'>
-          <h1><%= link_to 'Contribulator', root_path %></h1>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <%= link_to 'Contribulator', root_path, class: 'navbar-brand' %>
         </div>
-        <div class='col-md-4'>
-          <% if logged_in? %>
-            Welcome back <%= current_user.nickname %>
-            <%= link_to 'Logout', logout_path %>
-          <% else %>
-            <%= link_to 'Login', login_path %>
-          <% end %>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to 'Add a Project', new_project_path %></li>
+            <% if logged_in? %>
+              <li><%= current_user.nickname %></li>
+              <li><%= link_to 'Logout', logout_path %></li>
+            <% else %>
+              <li><%= link_to 'Login', login_path %></li>
+            <% end %>
+          </ul>
         </div>
       </div>
+    </div>
+
+    <div class="container">
       <%= yield %>
     </div>
   </body>
