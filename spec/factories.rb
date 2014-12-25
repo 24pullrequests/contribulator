@@ -7,5 +7,7 @@ FactoryGirl.define do
     sequence :owner do |n|
       "#{Faker::Lorem.word}-#{n}"
     end
+
+    score 20
   end
 end
