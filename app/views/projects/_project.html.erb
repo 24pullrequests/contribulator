@@ -1,16 +1,19 @@
-<h3>
-  <span class='btn btn-info'><%= project.score.round %></span>
-  <%= link_to project.name_with_owner, project.github_url %>
-  <% if project.main_language.present? %>
-    <small><%= project.main_language %></small>
-  <% end %>
-</h3>
+<div class='col-md-1'>
+  <h3><span class='btn btn-info pull-left'><%= project.score.round %></span></h3>
+</div>
 
-<% if project.description.present? %>
-  <p>
-    <%= truncate project.description, :length => 200 %>
-    <% if project.homepage.present? %>
-     <%= link_to project.homepage, project.homepage %>
+<div class='col-md-11'>
+  <h3>
+    <%= link_to project.name_with_owner, project.github_url %>
+    <% if project.main_language.present? %>
+      <small><%= project.main_language %></small>
     <% end %>
-  </p>
-<% end %>
+  </h3>
+
+  <% if project.description.present? %>
+    <p>
+      <%= truncate project.description, :length => 200 %>
+      <%= link_to project.homepage, project.homepage if project.homepage.present? %>
+    </p>
+  <% end %>
+</div>
