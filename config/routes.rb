@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'projects#index'
+  get 'projects/new' => 'projects#new', as: :new_project
   get 'projects/:id' => 'projects#show', as: :project
+  post 'projects' => 'projects#create', as: :projects
 
   get '/login',  to: 'sessions#new',     as: 'login'
   get '/logout', to: 'sessions#destroy', as: 'logout'
