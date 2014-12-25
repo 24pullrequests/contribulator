@@ -14,19 +14,9 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets";
+@import "bootswatch/flatly/variables";
 @import "bootstrap";
 
-// Example using 'Cerulean' bootswatch
-//
-// First import cerulean variables
-@import "bootswatch/sandstone/variables";
+body { padding-top: 100px; }
 
-// Then bootstrap itself
-@import "bootstrap";
-
-// Bootstrap body padding for fixed navbar
-body { padding-top: 60px; }
-
-// And finally bootswatch style itself
-@import "bootswatch/sandstone/bootswatch";
+@import "bootswatch/flatly/bootswatch";
