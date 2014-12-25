@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contribulator</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<div class="container">
-<h1>
-    <%= link_to 'Contribulator', root_path %>
-  </h1>
-
-  <% if logged_in? %>
-    <h2>
-      Welcome back <%= current_user.nickname %>
-      <%= link_to 'logout', logout_path %>
-    </h2>
-  <% else %>
-    <h2>
-      <%= link_to 'login', login_path %>
-    </h2>
-  <% end %>
-
-  <%= yield %>
-</div>
-
-</body>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contribulator</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container">
+      <div class='row'>
+        <div class='col-md-8'>
+          <h1><%= link_to 'Contribulator', root_path %></h1>
+        </div>
+        <div class='col-md-4'>
+          <% if logged_in? %>
+            Welcome back <%= current_user.nickname %>
+            <%= link_to 'Logout', logout_path %>
+          <% else %>
+            <%= link_to 'Login', login_path %>
+          <% end %>
+        </div>
+      </div>
+      <%= yield %>
+    </div>
+  </body>
 </html>
