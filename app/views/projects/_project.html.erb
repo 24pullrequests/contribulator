@@ -1,19 +1,21 @@
-<div class='col-md-1'>
-  <h3><span class='btn btn-info pull-left'><%= project.score.round %></span></h3>
-</div>
+<div class='project' id='project-<%= project.id %>'>
+  <div class='col-md-1'>
+    <h3><span class='btn btn-info pull-left'><%= project.score.round %></span></h3>
+  </div>
 
-<div class='col-md-11'>
-  <h3>
-    <%= link_to project.name_with_owner, project.github_url %>
-    <% if project.main_language.present? %>
+  <div class='col-md-11'>
+    <h3>
+      <%= link_to project.name_with_owner, project.github_url %>
+      <% if project.main_language.present? %>
       <small><%= project.main_language %></small>
-    <% end %>
-  </h3>
+      <% end %>
+    </h3>
 
-  <% if project.description.present? %>
+    <% if project.description.present? %>
     <p>
       <%= truncate project.description, :length => 200 %>
       <%= link_to project.homepage, project.homepage if project.homepage.present? %>
     </p>
-  <% end %>
+    <% end %>
+  </div>
 </div>
