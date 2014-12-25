@@ -47,6 +47,10 @@ class Project < ActiveRecord::Base
     @client ||= Octokit::Client.new(access_token: ENV['OCTOKIT_TOKEN'])
   end
 
+  def has_issues?
+    repo['has_issues']
+  end
+
   private
 
   def update_from_github

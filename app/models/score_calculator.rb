@@ -16,7 +16,8 @@ class ScoreCalculator
       changelog_present? ? 1 : 0,
       tests_present? ? 5 : 0,
       open_issues_created_since(6.months) > 10 ? 5 : 0,
-      commits_since(6.months) > 10 ? 5 : 0
+      commits_since(6.months) > 10 ? 5 : 0,
+      has_issues? ? 5 : 0
     ].sum
   end
 
@@ -31,7 +32,8 @@ class ScoreCalculator
       changelog_present: changelog_present?,
       tests_present: tests_present?,
       open_issues_last_6_months: open_issues_created_since(6.months),
-      master_commits_last_6_months: commits_since(6.months)
+      master_commits_last_6_months: commits_since(6.months),
+      has_issues: has_issues?
     }
   end
 
@@ -67,6 +69,10 @@ class ScoreCalculator
 
   def tests_present?
     folder_exists?('test') || folder_exists?('spec')
+  end
+
+  def has_issues?
+    project.has_issues?
   end
 
   def open_issues_created_since(date)
