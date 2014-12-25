@@ -80,5 +80,9 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  config.before do
+    allow_any_instance_of(Project).to receive(:update_info).and_return(true)
+  end
+
   config.include FactoryGirl::Syntax::Methods
 end
