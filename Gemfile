@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'spring',        group: :development
 gem 'octokit'
 gem 'bootstrap-sass', '~> 3.3.1'
+gem 'bootswatch-rails'
 gem 'rest_client'
 gem 'omniauth'
 gem 'omniauth-github'
