@@ -1,26 +1,16 @@
-<li>
-  <h3>
-    <%= link_to project.name_with_owner, project.github_url %>
-    - <%= link_to project.score, project %>
-  </h3>
-  <% if project.description.present? %>
+<h3>
+  <span class='btn btn-info'><%= project.score.round %></span>
+  <%= link_to project.name_with_owner, project.github_url %>
+  <% if project.main_language.present? %>
+    <small><%= project.main_language %></small>
+  <% end %>
+</h3>
+
+<% if project.description.present? %>
   <p>
     <%= truncate project.description, :length => 200 %>
+    <% if project.homepage.present? %>
+     <%= link_to project.homepage, project.homepage %>
+    <% end %>
   </p>
-  <% end %>
-  <% if project.main_language.present? %>
-  <p>
-    <%= project.main_language %>
-  </p>
-  <% end %>
-  <% if project.fork %>
-  <p>
-    fork
-  </p>
-  <% end %>
-  <% if project.homepage.present? %>
-  <p>
-    <%= link_to project.homepage, project.homepage %>
-  </p>
-  <% end %>
-</li>
+<% end %>
