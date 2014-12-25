@@ -3,6 +3,6 @@
 </h2>
 
 <%= form_for @project, url: {action:'create'} do |f| %>
-  <%= f.text_field :github_url %>
+  <%= f.text_field :github_url, :value => '', :placeholder => 'GitHub url' %>
   <%= f.submit 'Create' %>
 <% end %>
