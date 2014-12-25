@@ -1,6 +1,11 @@
 FactoryGirl.define do
   factory :project do
-    name '24pullrequests'
-    owner '24pullrequests'
+    sequence :name do |n|
+      "#{Faker::Lorem.word}-#{n}"
+    end
+
+    sequence :owner do |n|
+      "#{Faker::Lorem.word}-#{n}"
+    end
   end
 end
