@@ -3,6 +3,8 @@ class Project < ActiveRecord::Base
 
   after_create :update_info
 
+  MINIMUM_SCORE = 15
+
   def self.create_from_github_url(url)
     create parse_github_url(url)
   end

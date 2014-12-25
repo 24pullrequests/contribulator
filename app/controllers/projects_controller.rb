@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :ensure_logged_in, only: [:new, :create]
 
   def index
-    @projects = Project.order('score desc')
+    @projects = Project.order('score desc').where('score >= ?', Project::MINIMUM_SCORE)
   end
 
   def show
