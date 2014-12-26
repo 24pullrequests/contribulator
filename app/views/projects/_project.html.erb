@@ -1,6 +1,8 @@
 <div class='project' id='project-<%= project.id %>'>
   <div class='col-md-1'>
-    <h3><span class='btn btn-info pull-left'><%= project.score.round %></span></h3>
+    <h3>
+      <%= link_to project.score.round, project, class: 'btn btn-info pull-left' %>
+    </h3>
   </div>
 
   <div class='col-md-11'>
@@ -11,11 +13,11 @@
       <% end %>
     </h3>
 
-    <% if project.description.present? %>
-    <p>
-      <%= truncate project.description, :length => 200 %>
-      <%= link_to project.homepage, project.homepage if project.homepage.present? %>
-    </p>
+    <% if project.description.present? || project.homepage.present? %>
+      <p>
+        <%= truncate project.description, :length => 200 %>
+        <%= link_to project.homepage, project.homepage if project.homepage.present? %>
+      </p>
     <% end %>
   </div>
 </div>
