@@ -1,32 +1,36 @@
-<h1>
-  <%= link_to @project.name_with_owner, @project.github_url %>
-</h1>
+<div class='row'>
+  <div class='col-md-8'>
+    <div class='project' id='project-<%= @project.id %>'>
+      <div class='col-md-1'>
+        <h3>
+          <%= link_to @project.score.round, @project, class: 'btn btn-info pull-left' %>
+        </h3>
+      </div>
 
-<h2>
-  <%= link_to 'New project', new_project_path %>
-</h2>
+      <div class='col-md-11'>
+        <h3>
+          <%= link_to @project.name_with_owner, @project.github_url %>
+          <% if @project.main_language.present? %>
+          <small><%= @project.main_language %></small>
+          <% end %>
+        </h3>
 
-<p>
-  Score: <%= @project.score %>
-</p>
-
-<% if @project.description.present? %>
-<p>
-  <%= truncate @project.description, :length => 200 %>
-</p>
-<% end %>
-<% if @project.main_language.present? %>
-<p>
-  <%= @project.main_language %>
-</p>
-<% end %>
-<% if @project.fork %>
-<p>
-  fork
-</p>
-<% end %>
-<% if @project.homepage.present? %>
-<p>
-  <%= link_to @project.homepage, @project.homepage %>
-</p>
-<% end %>
+        <% if @project.description.present? || @project.homepage.present? %>
+        <p>
+          <%= truncate @project.description, :length => 200 %>
+          <%= link_to @project.homepage, @project.homepage if @project.homepage.present? %>
+        </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-4'>
+    <ul>
+      <% @project.summary.each do |key, value| %>
+        <li>
+          <%= key.to_s.humanize %>: <strong><%= value %></strong>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
