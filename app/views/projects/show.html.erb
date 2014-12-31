@@ -3,7 +3,9 @@
     <div class='project' id='project-<%= @project.id %>'>
       <div class='col-md-1'>
         <h3>
-          <%= link_to @project.score.round, @project, class: 'btn btn-info pull-left' %>
+          <%= link_to @project.score.round,
+              project_direct_path(user: @project.owner, repo: @project.name),
+              class: 'btn btn-info pull-left' %>
         </h3>
       </div>
 
