@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  root 'projects#index'
   get 'projects/new' => 'projects#new', as: :new_project
   get 'projects/:id' => 'projects#show', as: :project
   post 'projects' => 'projects#create', as: :projects
@@ -9,4 +8,8 @@ Rails.application.routes.draw do
 
   match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   post '/auth/failure',             to: 'sessions#failure'
+
+  match '/:user/:repo', to: 'projects#show', via: [:get], as: :project_direct
+
+  root 'projects#index'
 end
