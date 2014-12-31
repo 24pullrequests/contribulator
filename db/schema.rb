@@ -11,23 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141224233335) do
+ActiveRecord::Schema.define(version: 20141231123356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "projects", force: true do |t|
-    t.string  "name"
-    t.string  "owner"
-    t.string  "homepage"
-    t.string  "main_language"
-    t.integer "github_id"
-    t.boolean "fork",          default: false
-    t.float   "score",         default: 0.0
-    t.text    "description"
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.string   "owner"
+    t.string   "homepage"
+    t.string   "main_language"
+    t.integer  "github_id"
+    t.boolean  "fork",          default: false
+    t.float    "score",         default: 0.0
+    t.text     "description"
+    t.datetime "last_scored"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "uid",         null: false
     t.string   "nickname",    null: false
     t.string   "gravatar_id"
