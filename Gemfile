@@ -22,6 +22,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'faker'
   gem 'web-console'
+  gem 'guard'
+  gem 'guard-rspec'
 end
 
 group :production do
