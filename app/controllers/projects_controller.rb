@@ -18,7 +18,10 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    Project.create_from_github_url(params[:project][:github_url])
-    redirect_to root_path
+    project = Project.find_from_github_url(params[:project][:github_url])
+    flash[:info] = "#{project.owner}/#{project.name} has already been added." unless project.nil?
+    project = Project.create_from_github_url(params[:project][:github_url]) if project.nil?
+
+    redirect_to project_direct_path(user: project.owner, repo: project.name)
   end
 end
