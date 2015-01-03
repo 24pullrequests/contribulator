@@ -18,7 +18,6 @@ gem 'omniauth-github'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 
-
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
