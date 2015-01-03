@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'projects/new' => 'projects#new', as: :new_project
   get 'projects/:id' => 'projects#show', as: :project
   post 'projects' => 'projects#create', as: :projects
+  get 'projects' => 'projects#index', as: :project_index
 
   get '/login',  to: 'sessions#new',     as: 'login'
   get '/logout', to: 'sessions#destroy', as: 'logout'

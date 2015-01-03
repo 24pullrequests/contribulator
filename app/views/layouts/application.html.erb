@@ -16,7 +16,12 @@
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to 'Add a Project', new_project_path %></li>
+            <li>
+              <%= form_tag projects_path, class: 'navbar-form' do |f| %>
+                <%= text_field_tag 'project[github_url]', '', placeholder: 'Github Url', class: 'form-control' %>
+                <%= submit_tag 'Add', class: 'btn btn-default' %>
+              <% end %>
+            </li>
             <% if logged_in? %>
               <li><%= link_to current_user.nickname, '#' %></li>
               <li><%= link_to 'Logout', logout_path %></li>
