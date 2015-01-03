@@ -9,8 +9,11 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id]) if params[:id]
-    @project = Project.user_repo(params[:user], params[:repo]).first if params[:user] and params[:repo]
+    if params[:id].present?
+      @project = Project.find(params[:id])
+    else
+      @project = Project.find_by_owner_and_name(params[:user], params[:repo])
+    end
   end
 
   def new

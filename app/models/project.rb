@@ -6,7 +6,6 @@ class Project < ActiveRecord::Base
   MINIMUM_SCORE = 15
 
   scope :good, -> { where('score >= ?', Project::MINIMUM_SCORE) }
-  scope :user_repo, -> user, repo { where(owner: user, name: repo) }
 
   def self.languages
     select('DISTINCT main_language').map(&:main_language).compact.sort
