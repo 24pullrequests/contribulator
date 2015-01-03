@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   def index
     scope = Project.order('score desc').good
     scope = scope.where(main_language: params[:language]) if params[:language].present?
-    @projects = scope.all
+    @projects = scope.all.paginate(:page => params[:page], :per_page => 20)
     @languages = Project.good.languages
   end
 
