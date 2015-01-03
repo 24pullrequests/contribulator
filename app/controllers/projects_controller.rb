@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
     if params[:id].present?
       @project = Project.find(params[:id])
     else
-      @project = Project.find_by_owner_and_name(params[:user], params[:repo])
+      @project = Project.find_by_owner_and_name!(params[:user], params[:repo])
     end
   end
 
