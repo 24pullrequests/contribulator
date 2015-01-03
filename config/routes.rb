@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   post '/auth/failure',             to: 'sessions#failure'
 
+  get '/:user' => 'users#show', as: :user
   match '/:user/:repo', to: 'projects#show', via: [:get], as: :project_direct
 
   root 'projects#index'
