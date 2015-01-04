@@ -33,6 +33,12 @@
       </div>
     </div>
 
+    <div class="container notices">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %> alert-dismissible"><%= value %></div>
+      <% end %>
+    </div>
+
     <div class="container">
       <%= yield %>
     </div>
