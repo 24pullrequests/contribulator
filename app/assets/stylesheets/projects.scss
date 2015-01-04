@@ -1,3 +1,19 @@
 .project {
   clear: both;
 }
+
+.forkme {
+  position: absolute;
+  display: block;
+  top: 0;
+  z-index: 1031;
+  right: 0;
+}
+
+.forkme img {
+  border: 0;
+}
+
+.navbar-right {
+  margin-right: 61px !important;
+}
