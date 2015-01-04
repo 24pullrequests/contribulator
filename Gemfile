@@ -33,4 +33,5 @@ group :production do
   gem 'unicorn'
   gem 'rails_12factor'
   gem 'rack-google-analytics'
+  gem 'bugsnag'
 end

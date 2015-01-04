@@ -44,6 +44,8 @@ GEM
       sass (~> 3.2)
     bootswatch-rails (3.2.4)
       railties (>= 3.1)
+    bugsnag (2.7.0)
+      multi_json (~> 1.0)
     builder (3.2.2)
     celluloid (0.16.0)
       timers (~> 4.0.0)
@@ -258,6 +260,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   bootswatch-rails
+  bugsnag
   coffee-rails
   database_cleaner
   factory_girl_rails
