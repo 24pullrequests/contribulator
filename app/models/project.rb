@@ -75,7 +75,7 @@ class Project < ActiveRecord::Base
   end
 
   def format_url(url)
-    return url unless url.present?
+    return url if url.blank?
     url[/^https?:\/\//] ? url : "http://#{url}"
   end
 
