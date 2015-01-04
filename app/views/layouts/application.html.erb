@@ -23,7 +23,7 @@
               <% end %>
             </li>
             <% if logged_in? %>
-              <li><%= link_to current_user.nickname, '#' %></li>
+              <li><%= link_to current_user, current_user %></li>
               <li><%= link_to 'Logout', logout_path %></li>
             <% else %>
               <li><%= link_to 'Login', login_path %></li>

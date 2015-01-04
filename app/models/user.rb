@@ -3,6 +3,14 @@ class User < ActiveRecord::Base
     create!(AuthHash.new(hash).user_info)
   end
 
+  def to_s
+    nickname
+  end
+
+  def to_param
+    nickname
+  end
+
   def assign_from_auth_hash(hash)
     # do not update the email address in case the user has updated their
     # email prefs and used a new email
