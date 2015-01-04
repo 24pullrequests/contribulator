@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post '/auth/failure',             to: 'sessions#failure'
 
   get '/:user' => 'users#show', as: :user
-  match '/:user/:repo', to: 'projects#show', via: [:get], as: :project_direct
+  match '/:user/:repo', to: 'projects#show', via: [:get], as: :project_direct, constraints: { repo: /[^\/]+/ }
 
   root 'projects#index'
 end
