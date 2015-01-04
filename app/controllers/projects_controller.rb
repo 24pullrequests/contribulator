@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :ensure_logged_in, only: [:new, :create]
 
   def index
-    scope = Project.order('score desc').good
+    scope = Project.order('score desc, last_scored desc').good
     scope = scope.where(main_language: params[:language]) if params[:language].present?
     @projects = scope.all.paginate(page: params[:page], per_page: 20)
     @languages = Project.good.languages
