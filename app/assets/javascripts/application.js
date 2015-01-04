@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require emojione
 //= require_tree .
 Turbolinks.enableProgressBar();

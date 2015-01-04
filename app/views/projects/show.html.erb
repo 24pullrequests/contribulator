@@ -19,7 +19,7 @@
 
         <% if @project.description.present? || @project.homepage.present? %>
         <p>
-          <%= truncate @project.description, :length => 200 %>
+          <span class='js-emoji'><%= truncate @project.description, :length => 200 %></span>
           <%= link_to @project.homepage, @project.homepage if @project.homepage.present? %>
         </p>
         <% end %>
