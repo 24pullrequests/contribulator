@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
   validates :name, :owner, presence: true
+  validates :name, uniqueness: { scope: :owner, case_sensitive: false }
 
   after_create :update_info
 

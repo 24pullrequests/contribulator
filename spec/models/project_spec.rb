@@ -22,4 +22,8 @@ RSpec.describe Project, :type => :model do
       expect(build(:project, owner: nil)).to be_invalid
     end
   end
+
+  it 'validates unique owner/name' do
+    expect(build(:project, name: project.name, owner: project.owner)).to be_invalid
+  end
 end
