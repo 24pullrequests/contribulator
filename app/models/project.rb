@@ -67,10 +67,14 @@ class Project < ActiveRecord::Base
     name:          repo[:name],
     owner:         repo[:owner][:login],
     description:   repo[:description],
-    homepage:      repo[:homepage],
+    homepage:      format_url(repo[:homepage]),
     fork:          repo[:fork],
     main_language: repo[:language]
     )
+  end
+
+  def format_url(url)
+    url[/^https?:\/\//] ? url : "http://#{url}"
   end
 
   def update_score
