@@ -145,6 +145,9 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     rack (1.6.0)
+    rack-google-analytics (1.2.0)
+      actionpack
+      activesupport
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.2.0)
@@ -267,6 +270,7 @@ DEPENDENCIES
   omniauth
   omniauth-github
   pg
+  rack-google-analytics
   rails (= 4.2.0)
   rails_12factor
   rest_client

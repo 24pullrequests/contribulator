@@ -32,4 +32,5 @@ group :production do
   gem 'foreman'
   gem 'unicorn'
   gem 'rails_12factor'
+  gem 'rack-google-analytics'
 end
