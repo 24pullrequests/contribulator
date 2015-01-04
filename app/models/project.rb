@@ -80,7 +80,7 @@ class Project < ActiveRecord::Base
   end
 
   def update_score
-    update_attributes score: calculator.score, last_scored: Time.now.to_i
+    update_attributes score: calculator.score, last_scored: Time.now
   end
 
   def calculator
