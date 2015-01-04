@@ -23,6 +23,17 @@
           <%= link_to @project.homepage, @project.homepage if @project.homepage.present? %>
         </p>
         <% end %>
+
+        <p>
+          Score last calculated:
+          <strong>
+            <% if @project.last_scored.present? %>
+              <%= time_ago_in_words(@project.last_scored) %> ago
+            <% else %>
+              Never
+            <% end %>
+          </strong>
+        </p>
       </div>
     </div>
   </div>
