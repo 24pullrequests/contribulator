@@ -120,6 +120,7 @@ GEM
     multipart-post (2.0.0)
     nenv (0.1.1)
     netrc (0.7.9)
+    newrelic_rpm (3.9.9.275)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     oauth2 (1.0.0)
@@ -269,6 +270,7 @@ DEPENDENCIES
   guard
   guard-rspec
   jquery-rails
+  newrelic_rpm
   octokit
   omniauth
   omniauth-github

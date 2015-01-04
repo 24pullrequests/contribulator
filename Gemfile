@@ -34,4 +34,5 @@ group :production do
   gem 'rails_12factor'
   gem 'rack-google-analytics'
   gem 'bugsnag'
+  gem 'newrelic_rpm'
 end
