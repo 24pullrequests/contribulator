@@ -74,7 +74,9 @@ class Project < ActiveRecord::Base
   end
 
   def format_url(url)
-    url[/^https?:\/\//] ? url : "http://#{url}"
+    if url
+      url[/^https?:\/\//] ? url : "http://#{url}"
+    end
   end
 
   def update_score
