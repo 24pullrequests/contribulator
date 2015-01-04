@@ -16,6 +16,6 @@ namespace :projects do
 
   desc 'Re-calculate project scores'
   task recalculate_scores: :environment do
-    Project.all.each(&:update_info)
+    Project.needs_update.each(&:update_info)
   end
 end

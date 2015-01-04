@@ -7,6 +7,7 @@ class Project < ActiveRecord::Base
   MINIMUM_SCORE = 15
 
   scope :good, -> { where('score >= ?', Project::MINIMUM_SCORE) }
+  scope :needs_update, -> { where('last_scored <= ? OR last_scored IS NULL', 1.week.ago) }
 
   def self.languages
     select('DISTINCT main_language').map(&:main_language).compact.sort
