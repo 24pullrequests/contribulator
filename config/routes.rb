@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'issues/:id' => 'issues#show', as: :issue
+
   get 'projects/new' => 'projects#new', as: :new_project
   get 'projects/:id' => 'projects#show', as: :project
   post 'projects' => 'projects#create', as: :projects

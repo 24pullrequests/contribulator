@@ -1,0 +1,9 @@
+<div class='issue' id='issue-<%= issue.id %>'>
+  <h3>
+    <%= link_to issue.title, issue.url %>
+  </h3>
+  <article class="markdown-body">
+    <%== parse_markdown(issue.body) %>
+  </article>
+  <div><%= pluralize(issue.comments, 'reply') %></div>
+</div>
