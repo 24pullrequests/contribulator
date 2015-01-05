@@ -2,20 +2,20 @@
   <div class='col-md-8'>
     <div class='project' id='project-<%= @project.id %>'>
       <div class='col-md-1'>
-        <h3>
+        <h2>
           <%= link_to @project.score.round,
               project_direct_path(user: @project.owner, repo: @project.name),
               class: 'btn btn-info pull-left' %>
-        </h3>
+        </h2>
       </div>
 
       <div class='col-md-11'>
-        <h3>
+        <h2>
           <%= link_to @project.name_with_owner, @project.github_url %>
           <% if @project.main_language.present? %>
           <small><%= @project.main_language %></small>
           <% end %>
-        </h3>
+        </h2>
 
         <% if @project.description.present? || @project.homepage.present? %>
         <p>
@@ -34,6 +34,15 @@
             <% end %>
           </strong>
         </p>
+
+        <hr>
+
+        <% if @issues.length > 0 %>
+        <section role="issues">
+          <h2>Open Issues</h2>
+          <%= render @issues %>
+        </section>
+        <% end %>
       </div>
     </div>
   </div>
