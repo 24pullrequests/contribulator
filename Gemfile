@@ -20,7 +20,8 @@ gem 'omniauth-github'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'faraday-http-cache'
-gem 'redcarpet', '~> 3.2'
+gem 'github-markup', require: true
+gem 'redcarpet'
 
 group :development, :test do
   gem 'rspec-rails'

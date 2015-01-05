@@ -1,6 +1,7 @@
+require 'github/markup'
+
 module ApplicationHelper
   def parse_markdown(str)
-    @markdown ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-    @markdown.render(str)
+    GitHub::Markup.render('.md', str)
   end
 end
