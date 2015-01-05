@@ -17,3 +17,7 @@ Score projects on how good they are to contribute to
 `/:user/:repo`
  - score calculation
  - open issues
+
+ ## Copyright
+
+ Copyright (c) 2015 Andrew Nesbitt. See [LICENSE](https://github.com/andrew/contribulator/blob/master/LICENSE) for details.
