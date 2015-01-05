@@ -1,18 +1,38 @@
+<div class='languages row visible-xs visible-sm'>
+  <div class='col-md-8'>
+    <div class='dropdown'>
+      <button class='btn btn-info dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-expanded='true'>
+        Languages
+        <span class='caret'></span>
+      </button>
+      <ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>
+        <% @languages.each do |language| %>
+          <% if language == params[:language] %>
+            <li role='presentation' class='disabled'><a role='menuitem' tabindex='-1' href='#'><%= language %></a></li>
+          <% else %>
+            <li role='presentation'><%= link_to language, root_path(language: language), role: 'menuitem', tabindex: '-1' %>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <div class='row'>
   <div class='col-md-8'>
     <%= render @projects %>
     <%= will_paginate @projects, renderer: BootstrapPagination::Rails, page_links: false %>
   </div>
 
-  <div class='col-md-4 hidden-sm hidden-xs'>
+  <div class='col-md-4 hidden-xs hidden-sm'>
     <ul>
       <% @languages.each do |language| %>
         <li>
-        <% if language == params[:language] %>
-          <%= language %>
-        <% else %>
-          <%= link_to language, root_path(language: language) %>
-        <% end %>
+          <% if language == params[:language] %>
+            <%= language %>
+          <% else %>
+            <%= link_to language, root_path(language: language) %>
+          <% end %>
         </li>
       <% end %>
     </ul>

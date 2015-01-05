@@ -22,7 +22,7 @@ body { padding-top: 100px; }
 @import "bootswatch/flatly/bootswatch";
 @import "emoji";
 
-@media (max-width: $screen-xs-min) {
+@media (max-width: $screen-sm-min) {
   .project {
     border-bottom: 1px solid rgba(180, 188, 194, 0.3);
   }
