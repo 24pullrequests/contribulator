@@ -64,11 +64,15 @@ class ScoreCalculator
   end
 
   def changelog_present?
-    file_exists?('change')
+    file_exists?('change') || has_releases?
   end
 
   def tests_present?
     folder_exists?('test') || folder_exists?('spec')
+  end
+
+  def has_releases?
+    github_client.releases(project.repo_id).count > 1
   end
 
   def has_issues?
