@@ -1,6 +1,7 @@
 class Project < ActiveRecord::Base
   validates :name, :owner, presence: true
   validates :name, uniqueness: { scope: :owner, case_sensitive: false }
+  has_many :issues
 
   after_create :update_info
 
@@ -23,6 +24,10 @@ class Project < ActiveRecord::Base
   end
 
   def self.find_by_owner_and_name(owner, name)
+    find_by('lower(owner) = lower(?) AND lower(name) = lower(?)', owner, name)
+  end
+
+  def self.find_by_owner_and_name!(owner, name)
     find_by!('lower(owner) = lower(?) AND lower(name) = lower(?)', owner, name)
   end
 
@@ -47,6 +52,7 @@ class Project < ActiveRecord::Base
 
   def update_info
     update_from_github
+    update_issues if has_issues?
     update_score
   end
 
@@ -80,6 +86,14 @@ class Project < ActiveRecord::Base
     )
   end
 
+  def update_issues
+    open_issues.each do |open_issue|
+      issue = Issue.create_or_update_from(open_issue, self)
+      issue.project = self
+      issue.save!
+    end
+  end
+
   def format_url(url)
     return url if url.blank?
     url[/^https?:\/\//] ? url : "http://#{url}"
@@ -91,6 +105,10 @@ class Project < ActiveRecord::Base
 
   def calculator
     @calculator ||= ScoreCalculator.new(self)
+  end
+
+  def open_issues
+    @issues ||= github_client.list_issues(repo_id, state: 'open')
   end
 
   def repo

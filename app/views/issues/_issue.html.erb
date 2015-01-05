@@ -1,0 +1,8 @@
+<div class='issue' id='issue-<%= issue.id %>'>
+  <h3>
+    <%= link_to issue.title, issue.url %>
+  </h3>
+  <div>
+    <%== parse_markdown(issue.body) %>
+  </div>
+</div>

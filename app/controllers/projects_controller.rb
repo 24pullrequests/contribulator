@@ -14,6 +14,9 @@ class ProjectsController < ApplicationController
     else
       @project = Project.find_by_owner_and_name(params[:user], params[:repo])
     end
+
+    raise ActiveRecord::RecordNotFound if @project.nil?
+    @issues = @project.issues
   end
 
   def new

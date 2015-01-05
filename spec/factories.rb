@@ -1,4 +1,7 @@
-FactoryGirl.define do
+FactoryGirl.define do  factory :issue do
+    
+  end
+
   factory :project do
     sequence :name do |n|
       "#{Faker::Lorem.word}-#{n}"
