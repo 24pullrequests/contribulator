@@ -6,7 +6,7 @@ class Project < ActiveRecord::Base
 
   MINIMUM_SCORE = 15
 
-  self.per_page = 50
+  self.per_page = 30
 
   scope :good, -> { where('score >= ?', Project::MINIMUM_SCORE) }
   scope :needs_update, -> { where('last_scored <= ? OR last_scored IS NULL', 1.week.ago) }
