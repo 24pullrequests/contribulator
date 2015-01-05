@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 ruby '2.2.0'
 
 gem 'rails', '4.2.0'
-gem 'json'
 gem 'pg'
 gem 'sass-rails'
 gem 'uglifier'
@@ -20,7 +19,7 @@ gem 'omniauth-github'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'faraday-http-cache'
-gem 'github-markup', require: true
+gem 'github-markup', require: 'github/markup'
 gem 'redcarpet'
 
 group :development, :test do
