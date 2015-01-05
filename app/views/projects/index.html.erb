@@ -4,16 +4,18 @@
     <%= will_paginate @projects, renderer: BootstrapPagination::Rails %>
   </div>
 
-  <div class='col-md-4'>
-    <ul>
+  <div class='col-md-4 hidden-sm hidden-xs'>
+    <table class='table'>
       <% @languages.each do |language| %>
-      <li>
+      <tr>
+        <td>
         <% if language == params[:language] %>
           <%= language %>
         <% else %>
           <%= link_to language, root_path(language: language) %>
         <% end %>
-      </li>
+        </td>
+      </tr>
       <% end %>
     </ul>
   </div>

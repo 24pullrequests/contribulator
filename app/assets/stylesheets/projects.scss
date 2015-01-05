@@ -2,6 +2,18 @@
   clear: both;
 }
 
+.project > .project-title {
+  font-size: 26px;
+}
+
+.project a {
+  margin-right: 5px;
+}
+
+.project-title small {
+  font-size: 65%;
+}
+
 .forkme {
   position: absolute;
   display: block;

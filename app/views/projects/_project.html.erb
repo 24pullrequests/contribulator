@@ -1,25 +1,27 @@
 <div class='project' id='project-<%= project.id %>'>
-  <div class='col-md-1'>
-    <h3>
+  <div class='row project-title'>
+    <div class='col-md-1'>
       <%= link_to project.score.round,
-                  project_direct_path(user: project.owner, repo: project.name),
-                  class: 'btn btn-info pull-left' %>
-    </h3>
-  </div>
+        project_direct_path(user: project.owner, repo: project.name),
+        class: 'label label-info pull-left' %>
+    </div>
 
-  <div class='col-md-11'>
-    <h3>
+    <div class='col-md-11'>
       <%= link_to project.name_with_owner, project.github_url %>
       <% if project.main_language.present? %>
-      <small><%= project.main_language %></small>
+        <small class='text-muted'><%= project.main_language %></small>
       <% end %>
-    </h3>
+    </div>
+  </div>
 
-    <% if project.description.present? || project.homepage.present? %>
-      <p>
-        <span class='js-emoji'><%= truncate project.description, :length => 200 %></span>
-        <%= link_to project.homepage, project.homepage if project.homepage.present? %>
-      </p>
-    <% end %>
+  <div class='row project-description'>
+    <div class='col-md-11 col-md-offset-1'>
+      <% if project.description.present? || project.homepage.present? %>
+        <p>
+          <span class='js-emoji'><%= truncate project.description, :length => 200 %></span>
+          <%= link_to project.homepage, project.homepage if project.homepage.present? %>
+        </p>
+      <% end %>
+    </div>
   </div>
 </div>
