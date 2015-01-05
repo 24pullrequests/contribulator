@@ -15,6 +15,7 @@ class ScoreCalculator
       license_present? ? 5 : 0,
       changelog_present? ? 1 : 0,
       tests_present? ? 5 : 0,
+      code_of_conduct_present? ? 5 : 0,
       open_issues_created_since(6.months) > 10 ? 5 : 0,
       commits_since(6.months) > 10 ? 5 : 0,
       has_issues? ? 5 : 0
@@ -31,6 +32,7 @@ class ScoreCalculator
       license_present: license_present?,
       changelog_present: changelog_present?,
       tests_present: tests_present?,
+      code_of_conduct_present: code_of_conduct_present?,
       open_issues_last_6_months: open_issues_created_since(6.months),
       master_commits_last_6_months: commits_since(6.months),
       has_issues: has_issues?
@@ -61,6 +63,10 @@ class ScoreCalculator
 
   def license_present?
     file_exists?('license')
+  end
+
+  def code_of_conduct_present?
+    file_exists?('conduct')
   end
 
   def changelog_present?
