@@ -18,7 +18,7 @@ class ScoreCalculator
       code_of_conduct_present? ? 5 : 0,
       open_issues_created_since(6.months) > 10 ? 5 : 0,
       commits_since(6.months) > 10 ? 5 : 0,
-      has_issues? ? 5 : 0
+      issues_enabled? ? 5 : 0
     ].sum
   end
 
@@ -33,9 +33,9 @@ class ScoreCalculator
       changelog_present: changelog_present?,
       tests_present: tests_present?,
       code_of_conduct_present: code_of_conduct_present?,
+      issues_enabled: issues_enabled?,
       open_issues_last_6_months: open_issues_created_since(6.months),
-      master_commits_last_6_months: commits_since(6.months),
-      has_issues: has_issues?
+      master_commits_last_6_months: commits_since(6.months)
     }
   end
 
@@ -81,8 +81,8 @@ class ScoreCalculator
     github_client.releases(project.repo_id).count > 1
   end
 
-  def has_issues?
-    project.has_issues?
+  def issues_enabled?
+    project.issues_enabled?
   end
 
   def open_issues_created_since(date)
