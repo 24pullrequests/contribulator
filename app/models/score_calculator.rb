@@ -82,7 +82,7 @@ class ScoreCalculator
   end
 
   def issues_enabled?
-    project.issues_enabled?
+    project.has_issues?
   end
 
   def open_issues_created_since(date)
