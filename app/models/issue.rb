@@ -4,13 +4,15 @@ class Issue < ActiveRecord::Base
 
   def self.create_or_update_from(issue, project)
     find_or_create_by(github_id: issue.id) do |item|
-      item.url       = issue[:html_url]
-      item.title     = issue[:title]
-      item.state     = issue[:state]
-      item.comments  = issue[:comments]
-      item.closed_at = issue[:closed_at]
-      item.body      = issue[:body]
-      item.project   = project
+      item.url        = issue[:html_url]
+      item.title      = issue[:title]
+      item.state      = issue[:state]
+      item.comments   = issue[:comments]
+      item.closed_at  = issue[:closed_at]
+      item.body       = issue[:body]
+      item.created_at = issue[:created_at]
+      item.updated_at = issue[:updated_at]
+      item.project    = project
     end
   end
 end

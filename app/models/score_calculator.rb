@@ -87,7 +87,7 @@ class ScoreCalculator
 
   def open_issues_created_since(date)
     date_since = (Date.today - date).to_time.iso8601
-    github_client.list_issues(project.repo_id).count
+    Issue.where(created_at: date_since..Time.now.iso8601).count
   end
 
   def commits_since(date)
