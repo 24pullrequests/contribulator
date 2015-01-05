@@ -6,6 +6,8 @@ class Project < ActiveRecord::Base
 
   MINIMUM_SCORE = 15
 
+  self.per_page = 30
+
   scope :good, -> { where('score >= ?', Project::MINIMUM_SCORE) }
   scope :needs_update, -> { where('last_scored <= ? OR last_scored IS NULL', 1.week.ago) }
 
@@ -18,7 +20,12 @@ class Project < ActiveRecord::Base
   end
 
   def self.find_from_github_url(url)
-    find_by parse_github_url(url)
+    attrs = parse_github_url(url)
+    find_by_owner_and_name attrs[:owner], attrs[:name]
+  end
+
+  def self.find_by_owner_and_name(owner, name)
+    find_by!('lower(owner) = lower(?) AND lower(name) = lower(?)', owner, name)
   end
 
   def self.parse_github_url(url)

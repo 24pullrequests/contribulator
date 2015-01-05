@@ -15,9 +15,10 @@ class ScoreCalculator
       license_present? ? 5 : 0,
       changelog_present? ? 1 : 0,
       tests_present? ? 5 : 0,
+      code_of_conduct_present? ? 5 : 0,
       open_issues_created_since(6.months) > 10 ? 5 : 0,
       commits_since(6.months) > 10 ? 5 : 0,
-      has_issues? ? 5 : 0
+      issues_enabled? ? 5 : 0
     ].sum
   end
 
@@ -31,9 +32,10 @@ class ScoreCalculator
       license_present: license_present?,
       changelog_present: changelog_present?,
       tests_present: tests_present?,
+      code_of_conduct_present: code_of_conduct_present?,
+      issues_enabled: issues_enabled?,
       open_issues_last_6_months: open_issues_created_since(6.months),
-      master_commits_last_6_months: commits_since(6.months),
-      has_issues: has_issues?
+      master_commits_last_6_months: commits_since(6.months)
     }
   end
 
@@ -63,15 +65,23 @@ class ScoreCalculator
     file_exists?('license')
   end
 
+  def code_of_conduct_present?
+    file_exists?('conduct')
+  end
+
   def changelog_present?
-    file_exists?('change')
+    file_exists?('change') || has_releases?
   end
 
   def tests_present?
     folder_exists?('test') || folder_exists?('spec')
   end
 
-  def has_issues?
+  def has_releases?
+    github_client.releases(project.repo_id).count > 1
+  end
+
+  def issues_enabled?
     project.has_issues?
   end
 
