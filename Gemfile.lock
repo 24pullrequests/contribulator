@@ -106,6 +106,7 @@ GEM
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
+    json (1.8.1)
     jwt (1.2.0)
     kgio (2.9.2)
     listen (2.8.4)
@@ -281,7 +282,6 @@ DEPENDENCIES
   guard-rspec
   jquery-rails
   jquery-turbolinks
-  json
   newrelic_rpm
   octokit
   omniauth
