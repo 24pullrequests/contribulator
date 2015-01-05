@@ -1,48 +1,26 @@
 <div class='row'>
   <div class='col-md-8'>
-    <div class='project' id='project-<%= @project.id %>'>
-      <div class='col-md-1'>
-        <h3>
-          <%= link_to @project.score.round,
-              project_direct_path(user: @project.owner, repo: @project.name),
-              class: 'btn btn-info pull-left' %>
-        </h3>
-      </div>
-
-      <div class='col-md-11'>
-        <h3>
-          <%= link_to @project.name_with_owner, @project.github_url %>
-          <% if @project.main_language.present? %>
-          <small><%= @project.main_language %></small>
-          <% end %>
-        </h3>
-
-        <% if @project.description.present? || @project.homepage.present? %>
-        <p>
-          <span class='js-emoji'><%= @project.description %></span>
-          <%= link_to @project.homepage, @project.homepage if @project.homepage.present? %>
-        </p>
+    <%= render @project %>
+    <p>
+      Score last calculated:
+      <strong>
+        <% if @project.last_scored.present? %>
+          <%= time_ago_in_words(@project.last_scored) %> ago
+        <% else %>
+          Never
         <% end %>
-
-        <p>
-          Score last calculated:
-          <strong>
-            <% if @project.last_scored.present? %>
-              <%= time_ago_in_words(@project.last_scored) %> ago
-            <% else %>
-              Never
-            <% end %>
-          </strong>
-        </p>
-      </div>
-    </div>
+      </strong>
+    </p>
   </div>
   <div class='col-md-4'>
     <table class='table table-striped'>
       <% @project.summary.each do |key, value| %>
         <tr>
           <td>
-            <%= key.to_s.humanize %>: <strong><%= value %></strong>
+            <%= key.to_s.humanize %>:
+          </td>
+          <td>
+            <strong><%= value %></strong>
           </td>
         </tr>
       <% end %>

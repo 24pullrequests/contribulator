@@ -5,17 +5,15 @@
   </div>
 
   <div class='col-md-4 hidden-sm hidden-xs'>
-    <table class='table'>
+    <ul>
       <% @languages.each do |language| %>
-      <tr>
-        <td>
+        <li>
         <% if language == params[:language] %>
           <%= language %>
         <% else %>
           <%= link_to language, root_path(language: language) %>
         <% end %>
-        </td>
-      </tr>
+        </li>
       <% end %>
     </ul>
   </div>
