@@ -24,10 +24,6 @@ class Project < ActiveRecord::Base
   end
 
   def self.find_by_owner_and_name(owner, name)
-    find_by('lower(owner) = lower(?) AND lower(name) = lower(?)', owner, name)
-  end
-
-  def self.find_by_owner_and_name!(owner, name)
     find_by!('lower(owner) = lower(?) AND lower(name) = lower(?)', owner, name)
   end
 
