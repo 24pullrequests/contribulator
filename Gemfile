@@ -19,7 +19,7 @@ gem 'omniauth-github'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'faraday-http-cache'
-gem 'github-markup', require: true
+gem 'github-markup', require: 'github/markup'
 gem 'redcarpet'
 
 group :development, :test do
