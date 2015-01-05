@@ -38,12 +38,14 @@
     </div>
   </div>
   <div class='col-md-4'>
-    <ul>
+    <table class='table table-striped'>
       <% @project.summary.each do |key, value| %>
-        <li>
-          <%= key.to_s.humanize %>: <strong><%= value %></strong>
-        </li>
+        <tr>
+          <td>
+            <%= key.to_s.humanize %>: <strong><%= value %></strong>
+          </td>
+        </tr>
       <% end %>
-    </ul>
+    </table>
   </div>
 </div>
