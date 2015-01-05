@@ -6,7 +6,11 @@
 
 Find open source projects that are friendly to new contributors and help make your projects more friendly too.
 
-Initially extracted from http://24pullrequests.com/projects
+A score is calculated for each project based on a number of good practices to encourage more contributors.
+
+The higher the score, the more best practices have been followed and the more likely that project is to be friendly to new contributors.
+
+The idea for this project was initially extracted from the Projects section of  http://24pullrequests.com/.
 
 ## Development
 
