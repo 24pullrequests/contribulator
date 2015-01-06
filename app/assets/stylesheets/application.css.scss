@@ -30,4 +30,8 @@ body { padding-top: 100px; }
   .project {
     border-bottom: 1px solid rgba(180, 188, 194, 0.3);
   }
+
+  .project > .project-title {
+    font-size: 22px;
+  }
 }
