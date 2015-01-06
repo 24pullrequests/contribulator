@@ -1,20 +1,17 @@
 <div class='project' id='project-<%= project.id %>'>
-  <div class='col-md-1'>
-    <h3>
-      <%= link_to project.score.round,
-                  project_direct_path(user: project.owner, repo: project.name),
-                  class: 'btn btn-info pull-left' %>
-    </h3>
+  <div class='row project-title'>
+    <%= link_to project.score.round,
+      project_direct_path(user: project.owner, repo: project.name),
+      class: 'label label-info pull-left' %>
+
+    <%= link_to project.name_with_owner, project.github_url %>
+
+    <% if project.main_language.present? %>
+      <small class='text-muted'><%= project.main_language %></small>
+    <% end %>
   </div>
 
-  <div class='col-md-11'>
-    <h3>
-      <%= link_to project.name_with_owner, project.github_url %>
-      <% if project.main_language.present? %>
-      <small><%= project.main_language %></small>
-      <% end %>
-    </h3>
-
+  <div class='row project-description'>
     <% if project.description.present? || project.homepage.present? %>
       <p>
         <span class='js-emoji'><%= truncate project.description, :length => 200 %></span>

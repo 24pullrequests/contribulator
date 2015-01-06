@@ -1,58 +1,38 @@
 <div class='row'>
   <div class='col-md-8'>
-    <div class='project' id='project-<%= @project.id %>'>
-      <div class='col-md-1'>
-        <h2>
-          <%= link_to @project.score.round,
-              project_direct_path(user: @project.owner, repo: @project.name),
-              class: 'btn btn-info pull-left' %>
-        </h2>
-      </div>
-
-      <div class='col-md-11'>
-        <h2>
-          <%= link_to @project.name_with_owner, @project.github_url %>
-          <% if @project.main_language.present? %>
-          <small><%= @project.main_language %></small>
-          <% end %>
-        </h2>
-
-        <% if @project.description.present? || @project.homepage.present? %>
-        <p>
-          <span class='js-emoji'><%= @project.description %></span>
-          <%= link_to @project.homepage, @project.homepage if @project.homepage.present? %>
-        </p>
+    <%= render @project %>
+    <p>
+      Score last calculated:
+      <strong>
+        <% if @project.last_scored.present? %>
+          <%= time_ago_in_words(@project.last_scored) %> ago
+        <% else %>
+          Never
         <% end %>
+      </strong>
+    </p>
 
-        <p>
-          Score last calculated:
-          <strong>
-            <% if @project.last_scored.present? %>
-              <%= time_ago_in_words(@project.last_scored) %> ago
-            <% else %>
-              Never
-            <% end %>
-          </strong>
-        </p>
+    <hr>
 
-        <hr>
-
-        <% if @issues.length > 0 %>
-        <section role="issues">
-          <h2>Open Issues</h2>
-          <%= render @issues %>
-        </section>
-        <% end %>
-      </div>
-    </div>
+    <% if @issues.length > 0 %>
+      <section role="issues">
+        <h2>Open Issues</h2>
+        <%= render @issues %>
+      </section>
+    <% end %>
   </div>
   <div class='col-md-4'>
-    <ul>
+    <table class='table table-striped'>
       <% @project.summary.each do |key, value| %>
-        <li>
-          <%= key.to_s.humanize %>: <strong><%= value %></strong>
-        </li>
+        <tr>
+          <td>
+            <%= key.to_s.humanize %>:
+          </td>
+          <td>
+            <strong><%= value %></strong>
+          </td>
+        </tr>
       <% end %>
-    </ul>
+    </table>
   </div>
 </div>
