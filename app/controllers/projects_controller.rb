@@ -1,6 +1,11 @@
 class ProjectsController < ApplicationController
   before_action :ensure_logged_in, only: [:new, :create]
 
+  rescue_from Octokit::NotFound do
+    flash[:warning] = "This repository does not exist."
+    redirect_to(:back)
+  end
+
   def index
     scope = Project.order('score desc, last_scored desc').good
     scope = scope.where('lower(main_language) = lower(?)', params[:language]) if params[:language].present?
