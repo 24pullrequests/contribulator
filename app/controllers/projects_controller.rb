@@ -1,5 +1,3 @@
-require 'octokit'
-
 class ProjectsController < ApplicationController
   before_action :ensure_logged_in, only: [:new, :create]
 
