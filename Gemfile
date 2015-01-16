@@ -13,7 +13,7 @@ gem 'spring',        group: :development
 gem 'octokit'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
-gem 'rest_client'
+gem 'rest-client'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'will_paginate'

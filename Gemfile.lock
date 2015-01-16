@@ -128,7 +128,7 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     nenv (0.1.1)
-    netrc (0.7.9)
+    netrc (0.10.2)
     newrelic_rpm (3.9.9.275)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
@@ -201,8 +201,9 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     redcarpet (3.2.2)
-    rest_client (1.8.3)
-      netrc (~> 0.7.7)
+    rest-client (1.7.2)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -297,7 +298,7 @@ DEPENDENCIES
   rails (= 4.2.0)
   rails_12factor
   redcarpet
-  rest_client
+  rest-client
   rspec-rails
   sass-rails
   spring
