@@ -34,7 +34,7 @@ end
 
 group :production do
   gem 'foreman'
-  gem 'unicorn'
+  gem 'puma'
   gem 'rails_12factor'
   gem 'rack-google-analytics'
   gem 'bugsnag'
