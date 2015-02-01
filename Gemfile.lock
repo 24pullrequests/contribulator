@@ -38,7 +38,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     arel (6.0.0)
-    autoprefixer-rails (5.0.0.3)
+    autoprefixer-rails (5.1.1)
       execjs
       json
     binding_of_caller (0.7.2)
@@ -76,7 +76,7 @@ GEM
       i18n (~> 0.5)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    faraday-http-cache (1.0.0)
+    faraday-http-cache (1.0.1)
       faraday (~> 0.8)
     ffi (1.9.6)
     foreman (0.77.0)
@@ -228,7 +228,7 @@ GEM
       rspec-mocks (~> 3.1.0)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
-    sass (3.4.10)
+    sass (3.4.11)
     sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.1)
