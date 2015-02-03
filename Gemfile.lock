@@ -158,6 +158,10 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     pg (0.18.1)
+    pg_search (0.7.8)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     posix-spawn (0.3.9)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -294,6 +298,7 @@ DEPENDENCIES
   omniauth
   omniauth-github
   pg
+  pg_search
   puma
   rack-google-analytics
   rails (= 4.2.0)

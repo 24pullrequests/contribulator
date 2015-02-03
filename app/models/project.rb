@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+  include PgSearch
+
   validates :name, :owner, presence: true
   validates :name, uniqueness: { scope: :owner, case_sensitive: false }
   has_many :issues
@@ -11,6 +13,8 @@ class Project < ActiveRecord::Base
 
   scope :good, -> { where('score >= ?', Project::MINIMUM_SCORE) }
   scope :needs_update, -> { where('last_scored <= ? OR last_scored IS NULL', 1.week.ago) }
+
+  pg_search_scope :search_by_name_or_owner, against: [:name, :owner]
 
   def self.languages
     select('DISTINCT main_language').map(&:main_language).compact.sort
