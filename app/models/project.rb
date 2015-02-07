@@ -14,7 +14,9 @@ class Project < ActiveRecord::Base
   scope :good, -> { where('score >= ?', Project::MINIMUM_SCORE) }
   scope :needs_update, -> { where('last_scored <= ? OR last_scored IS NULL', 1.week.ago) }
 
-  pg_search_scope :search_by_name_or_owner, against: [:name, :owner]
+  pg_search_scope :search,
+    against: [:name, :owner, :description],
+    using: { tsearch: { prefix: true } }
 
   def self.languages
     select('DISTINCT main_language').map(&:main_language).compact.sort
