@@ -7,8 +7,9 @@ namespace :projects do
       projects.each do |project|
         url = project['github_url']
         puts url
-        unless Project.find_from_github_url(url)
-          Project.create_from_github_url(url)
+        github_project = GithubProject.new(url)
+        unless github_project.find
+          github_project.create
         end
       end
     end

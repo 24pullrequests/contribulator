@@ -22,28 +22,12 @@ class Project < ActiveRecord::Base
     select('DISTINCT main_language').map(&:main_language).compact.sort
   end
 
-  def self.create_from_github_url(url)
-    create parse_github_url(url)
-  end
-
-  def self.find_from_github_url(url)
-    attrs = parse_github_url(url)
-    find_by_owner_and_name attrs[:owner], attrs[:name]
-  end
-
   def self.find_by_owner_and_name(owner, name)
     find_by('lower(owner) = lower(?) AND lower(name) = lower(?)', owner, name)
   end
 
   def self.find_by_owner_and_name!(owner, name)
     find_by!('lower(owner) = lower(?) AND lower(name) = lower(?)', owner, name)
-  end
-
-  def self.parse_github_url(url)
-    url.gsub!(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '')
-    url.gsub!(/(\.git|\/)$/i, '')
-    parts = url.split('/')
-    { owner: parts[0], name: parts[1] }
   end
 
   def to_s
