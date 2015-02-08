@@ -57,16 +57,18 @@ RSpec.describe Project, :type => :model do
     end
 
     it 'returns all matches by description' do
-      match_1 = create(:project, {
+      match_1 = create(
+        :project,
         name: 'pajamas',
         owner: 'banana',
         description: 'this is my awesome project'
-      })
-      match_2 = create(:project, {
+      )
+      match_2 = create(
+        :project,
         name: 'peel',
         owner: 'banana',
         description: 'creates awesome peels'
-      })
+      )
       results = Project.search('awesome')
 
       expect(results).to include(match_1, match_2)

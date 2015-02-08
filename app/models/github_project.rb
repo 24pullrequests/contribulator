@@ -1,13 +1,13 @@
 class GithubProject
   REPO_URL = /^\w+\/\w+/i
-  GITHUB_URL = /^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i
+  GITHUB_URL = %r{^(((https|http|git)?://(www\.)?)|git@)github.com(:|/)}i
 
   def initialize(url)
     @url = url
   end
 
   def valid_url?
-    !!GITHUB_URL.match(@url) || !!REPO_URL.match(@url)
+    GITHUB_URL.match(@url).present? || REPO_URL.match(@url).present?
   end
 
   def find
@@ -26,7 +26,7 @@ class GithubProject
 
   def parse_github_url
     url = @url.gsub(GITHUB_URL, '')
-    url = @url.gsub(/(\.git|\/)$/i, '')
+    url = url.gsub(/(\.git|\/)$/i, '')
     parts = url.split('/')
 
     { owner: parts[0], name: parts[1] }

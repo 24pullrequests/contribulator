@@ -13,7 +13,7 @@ RSpec.describe SearchController, type: :controller do
       expect(response).to render_template('search/index')
     end
 
-    it 'searches for the given query and loads all the projects into @projects' do
+    it 'searches for the given query and loads the projects into @projects' do
       project = create(:project, name: 'pajamas', owner: 'bananas')
 
       get :index, q: 'bananas'
