@@ -19,5 +19,14 @@ RSpec.describe SearchController, type: :controller do
       get :index, q: 'bananas'
       expect(assigns(:projects)).to include(project)
     end
+
+    it 'searches for the given query and filters by language' do
+      java_project = create(:project, owner: 'bananas', main_language: 'java')
+      ruby_project = create(:project, owner: 'bananas', main_language: 'ruby')
+
+      get :index, q: 'bananas', main_language: 'ruby'
+      expect(assigns(:projects)).to include(ruby_project)
+      expect(assigns(:projects)).not_to include(java_project)
+    end
   end
 end
