@@ -74,4 +74,26 @@ RSpec.describe Project, :type => :model do
       expect(results).to include(match_1, match_2)
     end
   end
+
+  describe '.for_language' do
+    before do
+      create_list(:project, 3, owner: 'matz', main_language: 'Ruby')
+      create_list(:project, 2, owner: 'rich', main_language: 'Clojure')
+    end
+
+    context 'when a language argument is given' do
+      it 'applies a WHERE query to the collection' do
+        expect(Project.for_language('Ruby').size).to eq(3)
+      end
+    end
+
+    context 'when no language argument is given' do
+      it 'performs a noop' do
+        rich_projects = Project.where(owner: 'rich')
+        scoped_projects = rich_projects.for_language(nil)
+
+        expect(rich_projects).to eq(scoped_projects)
+      end
+    end
+  end
 end
