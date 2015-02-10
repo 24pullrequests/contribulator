@@ -13,7 +13,7 @@ class Project < ActiveRecord::Base
 
   scope :good, -> { where('score >= ?', Project::MINIMUM_SCORE) }
   scope :needs_update, -> { where('last_scored <= ? OR last_scored IS NULL', 1.week.ago) }
-  scope :for_language, lambda do |language|
+  scope :for_language, -> (language) do
     where(main_language: language) if language.present?
   end
 
