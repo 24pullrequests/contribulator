@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+  include PgSearch
+
   validates :name, :owner, presence: true
   validates :name, uniqueness: { scope: :owner, case_sensitive: false }
   has_many :issues
@@ -11,18 +13,18 @@ class Project < ActiveRecord::Base
 
   scope :good, -> { where('score >= ?', Project::MINIMUM_SCORE) }
   scope :needs_update, -> { where('last_scored <= ? OR last_scored IS NULL', 1.week.ago) }
+  scope :for_language, -> (language) do
+    where(main_language: language) if language.present?
+  end
+
+  pg_search_scope(
+    :search,
+    against: [:name, :owner, :description],
+    using: { tsearch: { prefix: true } }
+  )
 
   def self.languages
     select('DISTINCT main_language').map(&:main_language).compact.sort
-  end
-
-  def self.create_from_github_url(url)
-    create parse_github_url(url)
-  end
-
-  def self.find_from_github_url(url)
-    attrs = parse_github_url(url)
-    find_by_owner_and_name attrs[:owner], attrs[:name]
   end
 
   def self.find_by_owner_and_name(owner, name)
@@ -31,13 +33,6 @@ class Project < ActiveRecord::Base
 
   def self.find_by_owner_and_name!(owner, name)
     find_by!('lower(owner) = lower(?) AND lower(name) = lower(?)', owner, name)
-  end
-
-  def self.parse_github_url(url)
-    url.gsub!(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '')
-    url.gsub!(/(\.git|\/)$/i, '')
-    parts = url.split('/')
-    { owner: parts[0], name: parts[1] }
   end
 
   def to_s

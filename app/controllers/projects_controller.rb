@@ -28,10 +28,26 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    project = Project.find_from_github_url(params[:project][:github_url])
-    flash[:info] = "#{project.owner}/#{project.name} has already been added." unless project.nil?
-    project = Project.create_from_github_url(params[:project][:github_url]) if project.nil?
+    github_project = GithubProject.new(github_url)
 
-    redirect_to project_direct_path(user: project.owner, repo: project.name)
+    if github_project.valid_url?
+      project = github_project.find
+
+      if project.present?
+        flash[:info] = "#{project.owner}/#{project.name} has already been added."
+      else
+        project = github_project.create
+      end
+
+      redirect_to project_direct_path(user: project.owner, repo: project.name)
+    else
+      redirect_to project_search_path(q: github_url)
+    end
+  end
+
+  private
+
+  def github_url
+    params[:project][:github_url]
   end
 end

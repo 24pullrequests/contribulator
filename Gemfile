@@ -21,6 +21,7 @@ gem 'will_paginate-bootstrap'
 gem 'faraday-http-cache'
 gem 'github-markup', require: 'github/markup'
 gem 'redcarpet'
+gem 'pg_search'
 
 group :development, :test do
   gem 'rspec-rails'
