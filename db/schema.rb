@@ -30,23 +30,23 @@ ActiveRecord::Schema.define(version: 20150105182230) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string   "name"
-    t.string   "owner"
-    t.string   "homepage"
-    t.string   "main_language"
+    t.string   "name",          limit: 255
+    t.string   "owner",         limit: 255
+    t.string   "homepage",      limit: 255
+    t.string   "main_language", limit: 255
     t.integer  "github_id"
-    t.boolean  "fork",          default: false
-    t.float    "score",         default: 0.0
+    t.boolean  "fork",                      default: false
+    t.float    "score",                     default: 0.0
     t.text     "description"
     t.datetime "last_scored"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "uid",         null: false
-    t.string   "nickname",    null: false
-    t.string   "gravatar_id"
-    t.string   "token"
-    t.string   "email"
+    t.string   "uid",         limit: 255, null: false
+    t.string   "nickname",    limit: 255, null: false
+    t.string   "gravatar_id", limit: 255
+    t.string   "token",       limit: 255
+    t.string   "email",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
