@@ -20,7 +20,7 @@ class ProjectsController < ApplicationController
       @project = Project.find_by_owner_and_name!(params[:user], params[:repo])
     end
 
-    @issues = @project.issues || nil
+    @issues = @project.issues.limit(5) || nil
   end
 
   def new
