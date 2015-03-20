@@ -105,7 +105,7 @@ class Project < ActiveRecord::Base
   end
 
   def open_issues
-    @issues ||= github_client.list_issues(repo_id, state: 'open')
+    @issues ||= github_client.list_issues(repo_id, state: 'open').first(5)
   end
 
   def repo
