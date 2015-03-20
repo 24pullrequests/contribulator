@@ -12,9 +12,10 @@
       </strong>
     </p>
 
-    <% if @issues.length > 0 %>
+    <% if @issues.any? %>
+      <hr>
       <section role="issues">
-        <h2>Open Issues</h2>
+        <h3>Open Issues</h3>
         <%= render @issues %>
       </section>
     <% end %>
