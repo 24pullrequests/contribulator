@@ -2,6 +2,7 @@ class ScoreCalculator
   attr_accessor :project
 
   def initialize(project)
+    raise "Invalid type for ScoreCalculator, expected Project" unless project.class == Project
     @project = project
   end
 
@@ -16,8 +17,8 @@ class ScoreCalculator
       changelog_present? ? 1 : 0,
       tests_present? ? 5 : 0,
       code_of_conduct_present? ? 5 : 0,
-      open_issues_created_since(6.months) > 10 ? 5 : 0,
-      commits_since(6.months) > 10 ? 5 : 0,
+      open_issues_created_since(6.months.ago) > 10 ? 5 : 0,
+      commits_since(6.months.ago) > 10 ? 5 : 0,
       issues_enabled? ? 5 : 0
     ].sum
   end
@@ -34,8 +35,8 @@ class ScoreCalculator
       tests_present: tests_present?,
       code_of_conduct_present: code_of_conduct_present?,
       issues_enabled: issues_enabled?,
-      open_issues_last_6_months: open_issues_created_since(6.months),
-      master_commits_last_6_months: commits_since(6.months)
+      open_issues_last_6_months: open_issues_created_since(6.months.ago),
+      master_commits_last_6_months: commits_since(6.months.ago)
     }
   end
 
@@ -86,13 +87,11 @@ class ScoreCalculator
   end
 
   def open_issues_created_since(date)
-    date_since = (Date.today - date).to_time.iso8601
-    Issue.where(created_at: date_since..Time.now.iso8601).count
+    Issue.where(created_at: date.to_time.iso8601..Time.now.iso8601).count
   end
 
   def commits_since(date)
-    date_since = (Date.today - date).to_time.iso8601
-    github_client.commits(project.repo_id).count
+    github_client.commits_since(project.repo_id, date.to_time.iso8601).count
   end
 
   def github_client
