@@ -83,7 +83,7 @@ bundle exec rails s
 ### Tests
 
 Standard RSpec tests are used for testing the application. The
-tests can be run with `bundle exec rake`.
+tests can be run with `bundle exec rake`. Alternatively a [https://github.com/guard/guard](guard) configuration is provided, which depends on the result of `bundle exec spring binstub --all`, and can be used to watch tests with `bundle exec guard`
 
 (If you find a large number of tests failing right after you've cloned the project and run migrations, try running `rake db:schema:load`. This will reload the database schema and fix any issues relating to missing tables.)
 
