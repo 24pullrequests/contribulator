@@ -8,7 +8,8 @@ Find open source projects that are friendly to new contributors and help make yo
 
 A score is calculated for each project based on a number of good practices to encourage more contributors.
 
-The higher the score, the more best practices have been followed and the more likely that project is to be friendly to new contributors.
+The higher the score, the more best practices have been followed and the more likely that project is to be friendly to
+new contributors.
 
 The idea for this project was initially extracted from the Projects section of  http://24pullrequests.com/.
 
@@ -20,20 +21,23 @@ The idea for this project was initially extracted from the Projects section of  
 
 ### Getting Started
 
-New to Ruby? No worries! You can follow these instructions to install a local server, or you can use the included Vagrant setup.
+New to Ruby? No worries! You can follow these instructions to install a local server, or you can use the included
+Vagrant setup.
 
 #### Installing a Local Server
 
-First things first, you'll need to install Ruby 2.0. I recommend using the excellent [rbenv](https://github.com/sstephenson/rbenv),
-and [ruby-build](https://github.com/sstephenson/ruby-build)
+First things first, you'll need to install Ruby 2.0. I recommend using the excellent
+[rbenv](https://github.com/sstephenson/rbenv) and [ruby-build](https://github.com/sstephenson/ruby-build)
 
 ```bash
 rbenv install 2.2.0
 rbenv global 2.2.0
 ```
 
-Next, you'll need to make sure that you have PostgreSQL installed. This can be
-done easily on OSX using [Homebrew](http://mxcl.github.com/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com). Please see these [further instructions for installing Postgres via homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
+Next, you'll need to make sure that you have PostgreSQL installed. This can be done easily on OSX using
+[Homebrew](http://mxcl.github.com/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com).
+Please see these
+[further instructions for installing Postgres via homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
 
 ```bash
 brew install postgres
@@ -51,16 +55,15 @@ On Windows, you can use the [Chocolatey package manager](http://www.chocolatey.o
 choco install postgresql
 ```
 
-Now, let's install the gems from the `Gemfile` ("Gems" are synonymous with libraries in other
-languages).
+Now, let's install the gems from the `Gemfile` ("gems" are synonymous with libraries in other programming languages).
 
 ```bash
 gem install bundler && rbenv rehash
 bundle install
 ```
 
-Once all the gems are installed, we'll need to create the databases and
-tables. Rails makes this easy through the use of "Rake" tasks.
+Once all the gems are installed, we'll need to create the database and its tables. Ruby on Rails makes this easy
+through the use of "Rake" tasks.
 
 ```bash
 bundle exec rake db:create:all
@@ -85,7 +88,8 @@ bundle exec rails s
 Standard RSpec tests are used for testing the application. The
 tests can be run with `bundle exec rake`.
 
-(If you find a large number of tests failing right after you've cloned the project and run migrations, try running `rake db:schema:load`. This will reload the database schema and fix any issues relating to missing tables.)
+(If you find a large number of tests failing right after you've cloned the project and run migrations, try running
+`rake db:schema:load`. This will reload the database schema and fix any issues relating to missing tables.)
 
 If you are using the omniauth environment variables
 (GITHUB_KEY, GITHUB_SECRET)
@@ -104,11 +108,13 @@ as it will use it to learn more about the developers and for pull requests.
 
 ## Code of Conduct
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in
+this project you agree to abide by its terms.
 
 ## Contributors
 
-Lots of different people have contributed to this project, you can see them all here: https://github.com/andrew/contribulator/graphs/contributors
+Lots of different people have contributed to this project, you can see them all here:
+https://github.com/andrew/contribulator/graphs/contributors
 
 ## Copyright
 
