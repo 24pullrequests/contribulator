@@ -1,0 +1,5 @@
+en:
+  search:
+    index:
+      filter_by_language: "Filter by language:"
+      submit: Submit
