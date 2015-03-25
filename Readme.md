@@ -83,6 +83,13 @@ our browser to <http://localhost:3000>
 bundle exec rails s
 ```
 
+The app's probably looking a bit empty at the moment. You can run this rake task to import some more from the 
+service named 24 Pull Requests.
+
+```bash
+bundle exec rake projects:import_from_24pr
+```
+
 ### Tests
 
 Standard RSpec tests are used for testing the application. The
