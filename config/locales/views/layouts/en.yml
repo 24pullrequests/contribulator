@@ -3,7 +3,6 @@ en:
     application:
       tab_title: Contribulator
       header_title: Contribulator
-      search_placeholder: 'GitHub URL'
       search: 'Search'
       log_in: Log in
       log_out: Log out

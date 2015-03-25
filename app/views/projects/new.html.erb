@@ -1,8 +1,6 @@
-<h2>
-  New project...
-</h2>
+<h2><%= t('.title') %></h2>
 
 <%= form_for @project, url: {action:'create'} do |f| %>
-  <%= f.text_field :github_url, :value => '', :placeholder => 'GitHub url' %>
-  <%= f.submit 'Create' %>
+  <%= f.text_field :github_url, :value => '', :placeholder => t('github_url') %>
+  <%= f.submit t('.submit') %>
 <% end %>
