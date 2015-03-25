@@ -22,7 +22,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
               <%= form_tag projects_path, class: 'navbar-form' do |f| %>
-                <%= text_field_tag 'project[github_url]', '', placeholder: t('.search_placeholder'), class: 'form-control' %>
+                <%= text_field_tag 'project[github_url]', '', placeholder: t('github_url'), class: 'form-control' %>
                 <%= submit_tag t('.search'), class: 'btn btn-default' %>
               <% end %>
             </li>

@@ -1,0 +1,12 @@
+en:
+  projects:
+    index:
+      languages: Languages
+    new:
+      title: New Project
+      submit: Create
+    show:
+      score_last_calculated: "Score Last Calculated:"
+      time_ago: "%{time} ago"
+      not_calculated: "%{project} has not had its score calculated"
+      open_issues: Open Issues
