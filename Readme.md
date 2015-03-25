@@ -90,6 +90,9 @@ service named 24 Pull Requests.
 bundle exec rake projects:import_from_24pr
 ```
 
+You don't have to wait for this to completely finish, when you think you've imported enough press ctrl + c to
+stop the rake task.
+
 ### Tests
 
 Standard RSpec tests are used for testing the application. The
