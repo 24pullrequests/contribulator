@@ -1,0 +1,16 @@
+en:
+  activerecord:
+    models:
+      user:
+        one: User
+        other: Users
+    attributes:
+      user:
+        id: ID
+        uid: UID
+        nickname: Nickname
+        gravatar_id: Gravatar ID
+        token: Token
+        email: Email Address
+        created_at: Created at
+        updated_at: Updated at

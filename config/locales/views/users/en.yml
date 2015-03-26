@@ -1,0 +1,7 @@
+en:
+  users:
+    show:
+      my_projects: My Projects
+      users_projects: "%{user}'s Projects"
+      no_projects: "%{user} doesn't have any projects yet."
+      add_a_project: "Add a Project"

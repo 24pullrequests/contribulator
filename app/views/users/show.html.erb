@@ -1,13 +1,19 @@
 <div class='row'>
   <div class='col-md-8'>
     <h1>
-      <%= @user %>'s Projects
+      <% if @user == current_user %>
+        <%= t('.my_projects') %>
+      <% else %>
+        <%= t('.users_projects', user: @user.nickname) %>
+      <% end %>
     </h1>
     <% if @projects.any? %>
+      <%= link_to t('.add_a_project'), new_project_path %>
       <%= render @projects %>
     <% else %>
       <p>
-        <%= @user %> doesn't have any projects yet, <%= link_to 'add them first', new_project_path %>.
+        <%= t('.no_projects', user: @user.nickname) %>
+        <%= link_to t('.add_a_project'), new_project_path %>
       </p>
     <% end %>
   </div>
