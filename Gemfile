@@ -9,7 +9,8 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
-gem 'spring',        group: :development
+gem 'spring',                 group: :development
+gem 'spring-commands-rspec',  group: :development
 gem 'octokit'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
@@ -31,6 +32,8 @@ group :development, :test do
   gem 'web-console'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'guard-bundler'
+  gem 'guard-migrate'
 end
 
 group :production do
@@ -40,4 +43,9 @@ group :production do
   gem 'rack-google-analytics'
   gem 'bugsnag'
   gem 'newrelic_rpm'
+end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
 end
