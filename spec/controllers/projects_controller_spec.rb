@@ -64,10 +64,12 @@ RSpec.describe ProjectsController, :type => :controller do
     end
 
     describe "missing repo by user/repo" do
-      it "responds missing with an HTTP 404 status code" do
-        expect do
-          get :show, user: 'foo', repo: 'bar'
-        end.to raise_exception(ActiveRecord::RecordNotFound)
+      it "attempts to add the project" do
+        expect(Project.all.length).to eq(0)
+
+        get :show, user: 'foo', repo: 'bar'
+
+        expect(Project.all.length).to eq(1)
       end
     end
   end
