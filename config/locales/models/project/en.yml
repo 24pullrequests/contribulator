@@ -1,0 +1,18 @@
+en:
+  activerecord:
+    models:
+      project:
+        one: Project
+        other: Projects
+    attributes:
+      project:
+        id: ID
+        name: Name
+        owner: Owner
+        homepage: Home Page
+        main_language: Main Language
+        github_id: GitHub ID
+        fork: Fork
+        score: Score
+        description: Description
+        last_scored: Last Scored

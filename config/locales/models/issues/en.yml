@@ -1,0 +1,19 @@
+en:
+  activerecord:
+    models:
+      issue:
+        one: Issue
+        other: Issues
+    attributes:
+      issue:
+        id: ID
+        github_id: GitHub ID
+        url: URL
+        title: Title
+        state: State
+        comments: Comments
+        closed_at: Closed at
+        body: Body
+        project_id: Project ID
+        created_at: Created at
+        updated_at: Updated at

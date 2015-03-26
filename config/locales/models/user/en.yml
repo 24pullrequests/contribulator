@@ -3,7 +3,7 @@ en:
     models:
       user:
         one: User
-        other: Users
+        other: User
     attributes:
       user:
         id: ID

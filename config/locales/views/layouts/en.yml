@@ -1,0 +1,9 @@
+en:
+  layouts:
+    application:
+      tab_title: Contribulator
+      header_title: Contribulator
+      search: 'Search'
+      log_in: Log in
+      log_out: Log out
+      project_count: "Tracking %{count} Projects"

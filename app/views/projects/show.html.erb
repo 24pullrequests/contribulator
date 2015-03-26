@@ -2,12 +2,12 @@
   <div class='col-md-8'>
     <%= render @project %>
     <p>
-      Score last calculated:
       <strong>
         <% if @project.last_scored.present? %>
-          <%= time_ago_in_words(@project.last_scored) %> ago
+          <%= t('.score_last_calculated') %>
+          <%= t('.time_ago', time: time_ago_in_words(@project.last_scored)) %>
         <% else %>
-          Never
+          <%= t('.not_calculated', project: @project.name) %>
         <% end %>
       </strong>
     </p>
@@ -15,7 +15,7 @@
     <% if @issues.any? %>
       <hr>
       <section role="issues">
-        <h3>Open Issues</h3>
+        <h3><%= t('.open_issues') %></h3>
         <%= render @issues %>
       </section>
     <% end %>
