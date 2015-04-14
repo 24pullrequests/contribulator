@@ -26,12 +26,12 @@ Vagrant setup.
 
 #### Installing a Local Server
 
-First things first, you'll need to install Ruby 2.0. I recommend using the excellent
+First things first, you'll need to install Ruby 2.2.2. I recommend using the excellent
 [rbenv](https://github.com/sstephenson/rbenv) and [ruby-build](https://github.com/sstephenson/ruby-build)
 
 ```bash
-rbenv install 2.2.0
-rbenv global 2.2.0
+rbenv install 2.2.2
+rbenv global 2.2.2
 ```
 
 Next, you'll need to make sure that you have PostgreSQL installed. This can be done easily on OSX using
@@ -83,7 +83,7 @@ our browser to <http://localhost:3000>
 bundle exec rails s
 ```
 
-The app's probably looking a bit empty at the moment. You can run this rake task to import some more from the 
+The app's probably looking a bit empty at the moment. You can run this rake task to import some more from the
 service named 24 Pull Requests.
 
 ```bash
