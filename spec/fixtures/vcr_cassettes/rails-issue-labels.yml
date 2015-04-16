@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/rails/rails/issues/19663
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 3.8.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 16 Apr 2015 18:13:28 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '28'
+      X-Ratelimit-Reset:
+      - '1429209477'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Last-Modified:
+      - Tue, 14 Apr 2015 19:58:27 GMT
+      Etag:
+      - W/"f497f14bd6e509907e77da7413695310"
+      Vary:
+      - Accept
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - BC27F65B:09F1:12382D1:552FFBC8
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Served-By:
+      - 2811da37fbdda4367181b328b22b2499
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/rails/rails/issues/19663","labels_url":"https://api.github.com/repos/rails/rails/issues/19663/labels{/name}","comments_url":"https://api.github.com/repos/rails/rails/issues/19663/comments","events_url":"https://api.github.com/repos/rails/rails/issues/19663/events","html_url":"https://github.com/rails/rails/issues/19663","id":66500079,"number":19663,"title":"HABTM
+        new records error when saving when partial writes are off","user":{"login":"malmckay","id":33397,"avatar_url":"https://avatars.githubusercontent.com/u/33397?v=3","gravatar_id":"","url":"https://api.github.com/users/malmckay","html_url":"https://github.com/malmckay","followers_url":"https://api.github.com/users/malmckay/followers","following_url":"https://api.github.com/users/malmckay/following{/other_user}","gists_url":"https://api.github.com/users/malmckay/gists{/gist_id}","starred_url":"https://api.github.com/users/malmckay/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/malmckay/subscriptions","organizations_url":"https://api.github.com/users/malmckay/orgs","repos_url":"https://api.github.com/users/malmckay/repos","events_url":"https://api.github.com/users/malmckay/events{/privacy}","received_events_url":"https://api.github.com/users/malmckay/received_events","type":"User","site_admin":false},"labels":[{"url":"https://api.github.com/repos/rails/rails/labels/activerecord","name":"activerecord","color":"0b02e1"},{"url":"https://api.github.com/repos/rails/rails/labels/With%20reproduction%20steps","name":"With
+        reproduction steps","color":"009800"}],"state":"open","locked":false,"assignee":null,"milestone":null,"comments":5,"created_at":"2015-04-06T00:58:24Z","updated_at":"2015-04-14T19:58:27Z","closed_at":null,"body":"Example
+        spec fail here - https://gist.github.com/malmckay/1262766f0d8980db6fe7\r\n\r\nWhen
+        I disable partial_writes my HABTM association error on save (in some cases).\r\n\r\nPrimaryKey#id_was
+        raises, because the join table does not have a primary key.","closed_by":null}'
+    http_version: 
+  recorded_at: Thu, 16 Apr 2015 18:13:28 GMT
+recorded_with: VCR 2.9.3

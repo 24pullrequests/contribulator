@@ -2,6 +2,16 @@
   <h4>
     <%= link_to issue.title, issue.url %>
   </h4>
+  <% labels = issue.labels %>
+  <% if labels %>
+    <ul class="issue-labels list-inline">
+      <% labels.each do |label| %>
+        <li class="issue-label" style="background-color: #<%= label[:color] %>">
+          <strong><%= link_to label[:name], label[:url] %></strong>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
   <article class="markdown-body hidden-sm hidden-xs">
     <%== parse_markdown(issue.body) %>
   </article>

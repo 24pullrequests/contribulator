@@ -4,6 +4,10 @@ FactoryGirl.define do
       "whatever-#{n}"
     end
 
+    sequence :number do |n|
+      "#{n}"
+    end
+
     sequence :url do |n|
       "http://somewhere-#{n}.com"
     end
