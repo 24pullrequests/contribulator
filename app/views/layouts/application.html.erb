@@ -49,7 +49,8 @@
     <footer>
       <div class="container">
         <div class='row'>
-          <%= t('.project_count', count: Project.count) %>
+          <div class="col-md-6 col-xs-6"><%= t('.project_count', count: Project.count) %></div>
+          <div class="col-md-6 col-xs-6 text-right"><%= link_to t('.about_this'), about_path %></div>
         </div>
       </div>
     </footer>

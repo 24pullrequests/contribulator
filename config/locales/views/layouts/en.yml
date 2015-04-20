@@ -7,3 +7,4 @@ en:
       log_in: Log in
       log_out: Log out
       project_count: "Tracking %{count} Projects"
+      about_this: "About Contribulator"
