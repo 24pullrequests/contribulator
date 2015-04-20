@@ -21,7 +21,7 @@
 <% if @issue %>
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h4 class="panel-title"><%= t('.can_you_help') %> '<%= link_to @issue.title, @issue.html_url %>'?</h4>
+      <h4 class="panel-title"><%= t('.can_you_help') %> '<%= link_to @issue.title, @issue.url %>'?</h4>
     </div>
     <div class="panel-body">
 
@@ -39,9 +39,9 @@
       <% end %>
 
       <% if @issue.comments > 0 %>
-        <p class="text-success"><%= link_to "#{@issue.comments} #{t('.replies')}", @issue.html_url %></p>
+        <p class="text-success"><%= link_to "#{@issue.comments} #{t('.replies')}", @issue.url %></p>
       <% else %>
-        <p class="text-warning"><%= link_to t('.no_replies'), @issue.html_url %></p>
+        <p class="text-warning"><%= link_to t('.no_replies'), @issue.url %></p>
       <% end %>
     </div>
   </div>
