@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def about
     @project   = Project.good.sample
     @languages = Project.languages
-    @issue     = github.issues("#{@project.owner}/#{@project.name}").sample
+    @issue     = github.issues("#{@project.owner}/#{@project.name}", state: 'open').sample
   end
 
   private
