@@ -21,7 +21,6 @@ class Issue < ActiveRecord::Base
     return [] if number.nil?
     github_client.issue("#{project.owner}/#{project.name}", number).labels.map(&:to_h)
   rescue => e
-    puts e
     []
   end
 
