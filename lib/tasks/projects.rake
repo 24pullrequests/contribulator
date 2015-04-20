@@ -19,4 +19,22 @@ namespace :projects do
   task recalculate_scores: :environment do
     Project.needs_update.each(&:update_info)
   end
+
+  desc 'refresh issue ids relative to repositories'
+  task refresh_issues: :environment do
+    require 'ostruct'
+
+    client = Octokit::Client.new(access_token: ENV['OCTOKIT_TOKEN'])
+
+    Project.all.each do |project|
+      repo = "#{project.owner}/#{project.name}"
+      client.issues(repo, state: 'open').first(5).each do |github_issue|
+        issue = Issue.find_by_github_id(github_issue.id)
+        if issue
+          issue.number = github_issue.number
+          issue.save!
+        end
+      end
+    end
+  end
 end

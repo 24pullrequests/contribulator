@@ -1,0 +1,13 @@
+.issue-label {
+  padding: 0.2em 0.8em;
+  color: white;
+}
+
+.issue-label a {
+  color: white;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
