@@ -1,0 +1,52 @@
+<div class="col-xs-12 col-md-8">
+  <h2>What is Contribulator?</h2>
+
+  <p>Inspired by <%= link_to '24pullrequests', 'https://github.com/24pullrequests/24pullrequests' %>, Contribulator is a tool to help developers find open source projects to contribute to and rate projects according to best practices in issue management and documentation.</p>
+
+  <h3>Scoring</h3>
+
+  <p>Projects are scored according to a number of factors including the presence of licenses, contributing guidelines and readme files. Contribulator also takes into account whether the repository has issues enabled, how active the issue tracker is and whether it uses tags (releases).</p>
+
+  <p>Individual items are scored, with some being weighted higher than others, to produce a total score for the project. Scores are then updated periodically to best reflect the changing nature of a project.</p>
+
+  <h3>How can I get involved?</h3>
+
+  <p><%= link_to 'Contribulator', 'https://github.com/andrew/contribulator' %> is itself an open source project with a need for developers, designers and community members. We believe in an inclusive and welcoming environment for all.</p>
+
+  <p>If you wish to help with Contribulator please submit an issue or pull request or visit <%= link_to 'gitter', 'https://gitter.im/andrew/contribulator' %> to chat about the project or discuss any ideas you may have.</p>
+
+  <p>We currently track projects using the following languages: <span class="text-warning"><%= @languages.join(', ') %>.</span> If your favourite language isn't listed here then please feel free to add a project using the form in the navigation bar.</p>
+
+</div>
+
+<div class="col-md-4 hidden-xs hidden-md">
+  <%= render @project %>
+<% if @issue %>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">Can you help with: '<%= link_to @issue.title, @issue.html_url %>'?</h4>
+    </div>
+    <div class="panel-body">
+
+      <%== parse_markdown(@issue.body) %>
+
+      <% labels = @issue.labels %>
+      <% if labels %>
+        <ul class="issue-labels list-inline">
+          <% labels.each do |label| %>
+            <li class="issue-label" style="background-color: #<%= label[:color] %>">
+              <strong><%= link_to label[:name], label[:url] %></strong>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+
+      <% if @issue.comments > 0 %>
+        <p class="text-success"><%= link_to "#{@issue.comments} replies", @issue.html_url %></p>
+      <% else %>
+        <p class="text-warning"><%= link_to "This issue has no replies!", @issue.html_url %></p>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+</div>
