@@ -1,0 +1,16 @@
+en:
+  pages:
+    about:
+      what: What is Contribulator?
+      inspired_html: "Inspired by %{link}, Contribulator is a tool to help developers find open source projects to contribute to and rate projects according to best practices in issue management and documentation."
+      scoring: Scoring
+      projects_scored: "Projects are scored according to a number of factors including the presence of licenses, contributing guidelines and readme files. Contribulator also takes into account whether the repository has issues enabled, how active the issue tracker is and whether it uses tags (releases)."
+      projects_individual: "Individual items are scored, with some being weighted higher than others, to produce a total score for the project. Scores are then updated periodically to best reflect the changing nature of a project."
+      how: How can I get involved?
+      contribulator_html: "%{link} is itself an open source project with a need for developers, designers and community members. We believe in an inclusive and welcoming environment for all."
+      help: "If you wish to help with Contribulator please submit an issue or pull request or visit %{link} to chat about the project or discuss any ideas you may have."
+      track: "We currently track projects using the following languages:"
+      your_language: If your favourite language isn't listed here then please feel free to add a project using the form in the navigation bar.
+      can_you_help: "Can you help with:"
+      replies: replies
+      no_replies: This issue has no replies!
