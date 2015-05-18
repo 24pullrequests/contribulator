@@ -5,14 +5,13 @@
 
   <h3><%= t('.scoring') %></h3>
   <p><%= t('.projects_scored') %></p>
-  <p><%= t('.projects_individual') %></p>
 
   <h3><%= t('.how') %></h3>
   <p><%= t('.contribulator_html', link: link_to('Contribulator', 'https://github.com/andrew/contribulator')) %></p>
 
-  <p><%= t('.help', link: link_to('gitter', 'https://gitter.im/andrew/contribulator')) %></p>
+  <p><%= t('.help_html', link: link_to('gitter', 'https://gitter.im/andrew/contribulator')) %></p>
 
-  <p><%= t('.track') %> <span class="text-warning"><%= @languages.join(', ') %>.</span> <%= t('.your_language') %></p>
+  <p><%= t('.track_html', languages: @languages.to_sentence) %></p>
 
 </div>
 
