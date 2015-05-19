@@ -75,7 +75,7 @@ class ScoreCalculator
   end
 
   def tests_present?
-    folder_exists?('test') || folder_exists?('spec')
+    folder_exists?('test') || folder_exists?('spec') || folder_exists?('tests')
   end
 
   def has_releases?

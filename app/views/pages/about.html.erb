@@ -1,0 +1,48 @@
+<div class="col-xs-12 col-md-8">
+  <h2><%= t('.what') %></h2>
+
+  <p><%= t('.inspired_html', link: link_to('24pullrequests', 'https://github.com/24pullrequests/24pullrequests')) %></p>
+
+  <h3><%= t('.scoring') %></h3>
+  <p><%= t('.projects_scored') %></p>
+
+  <h3><%= t('.how') %></h3>
+  <p><%= t('.contribulator_html', link: link_to('Contribulator', 'https://github.com/andrew/contribulator')) %></p>
+
+  <p><%= t('.help_html', link: link_to('gitter', 'https://gitter.im/andrew/contribulator')) %></p>
+
+  <p><%= t('.track_html', languages: @languages.to_sentence) %></p>
+
+</div>
+
+<div class="col-md-4 hidden-xs hidden-md">
+  <%= render @project %>
+<% if @issue %>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title"><%= t('.can_you_help') %> '<%= link_to @issue.title, @issue.url %>'?</h4>
+    </div>
+    <div class="panel-body">
+
+      <%== parse_markdown(@issue.body) %>
+
+      <% labels = @issue.labels %>
+      <% if labels %>
+        <ul class="issue-labels list-inline">
+          <% labels.each do |label| %>
+            <li class="issue-label" style="background-color: #<%= label[:color] %>">
+              <strong><%= link_to label[:name], label[:url] %></strong>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+
+      <% if @issue.comments > 0 %>
+        <p class="text-success"><%= link_to "#{@issue.comments} #{t('.replies')}", @issue.url %></p>
+      <% else %>
+        <p class="text-warning"><%= link_to t('.no_replies'), @issue.url %></p>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+</div>

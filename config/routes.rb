@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/about' => 'pages#about'
+
   get 'issues/:id' => 'issues#show', as: :issue
 
   get 'projects/new' => 'projects#new', as: :new_project
@@ -10,7 +12,6 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy', as: 'logout'
 
   get '/search', to: 'search#index', as: :project_search
-
   match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   post '/auth/failure',             to: 'sessions#failure'
 
