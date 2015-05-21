@@ -64,13 +64,24 @@ RSpec.describe ProjectsController, :type => :controller do
     end
 
     describe "missing repo by user/repo" do
-      it "attempts to add the project" do
+      it "redirects to a prompt screen before adding the repo" do
+        get :show, user: 'foo', repo: 'bar'
+        expect(response).to redirect_to(project_confirm_path)
+      end
+
+      it "doesn't attempt to add the project" do
         expect(Project.all.length).to eq(0)
 
         get :show, user: 'foo', repo: 'bar'
 
-        expect(Project.all.length).to eq(1)
+        expect(Project.all.length).to eq(0)
       end
     end
+  end
+
+  describe "GET #confirm" do
+    it "requires the project id or github ower/repo"
+    it "displays a confirmation screen for adding a project"
+    it "adds the project after confirmation"
   end
 end

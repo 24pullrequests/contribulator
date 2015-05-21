@@ -18,11 +18,11 @@ class ProjectsController < ApplicationController
       @project = Project.find_by_owner_and_name(params[:user], params[:repo])
     end
 
-    if @project.nil?
-      @project = Project.create(owner: params[:user], name: params[:repo])
-    end
+    redirect_to project_confirm_path(url: "#{params[:user]}/#{params[:repo]}") and return if @project.nil?
 
-    @issues = @project.issues.limit(5) || nil
+    if @project
+      @issues = @project.issues.limit(5) || nil
+    end
   end
 
   def new
@@ -33,7 +33,7 @@ class ProjectsController < ApplicationController
     github_project = GithubProject.new(github_url)
 
     unless github_project.valid_url?
-      redirect_to project_search_path(q: github_url)
+      redirect_to project_search_path(q: github_url) and return
     end
 
     project = github_project.find
@@ -44,7 +44,15 @@ class ProjectsController < ApplicationController
       project = github_project.create
     end
 
-      redirect_to project_direct_path(user: project.owner, repo: project.name)
+    redirect_to project_direct_path(user: project.owner, repo: project.name)
+  end
+
+  # GET projects/confirm
+  # Prompt the user to confirm adding a project to Contribulator
+  def confirm
+    redirect_to projects_path and return if params[:url].nil?
+
+    @url = params[:url]
   end
 
   private
