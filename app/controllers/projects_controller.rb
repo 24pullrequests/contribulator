@@ -32,6 +32,11 @@ class ProjectsController < ApplicationController
   def create
     github_project = GithubProject.new(github_url)
 
+    unless params[:confirmed]
+      parts = github_project.to_h
+      redirect_to project_confirm_path(url: "#{parts[:owner]}/#{parts[:name]}") and return
+    end
+
     unless github_project.valid_url?
       redirect_to project_search_path(q: github_url) and return
     end
