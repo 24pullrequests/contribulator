@@ -1,0 +1,10 @@
+<h2><%= t('.title_not_found') %></h2>
+
+<p><%= t('.confirm', project: @url) %></p>
+
+<%= form_tag projects_path do %>
+  <%= hidden_field_tag 'project[github_url]', @url %>
+  <%= hidden_field_tag 'confirmed', true %>
+  <%= submit_tag t('.add_project'), class: 'btn btn-primary' %>
+  <%= link_to t('.go_back'), :back, class: 'btn btn-xs' %>
+<% end %>

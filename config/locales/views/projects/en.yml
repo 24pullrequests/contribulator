@@ -5,6 +5,11 @@ en:
     new:
       title: New Project
       submit: Create
+    confirm:
+      title_not_found: Project not found
+      confirm: "%{project} was not found, would you like to add it?"
+      add_project: Add Project
+      go_back: Go back
     show:
       score_last_calculated: "Score Last Calculated:"
       time_ago: "%{time} ago"

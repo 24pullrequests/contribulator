@@ -64,13 +64,35 @@ RSpec.describe ProjectsController, :type => :controller do
     end
 
     describe "missing repo by user/repo" do
-      it "attempts to add the project" do
+      it "redirects to a prompt screen before adding the repo" do
+        get :show, user: 'foo', repo: 'bar'
+        expect(response).to redirect_to(project_confirm_path(url: 'foo/bar'))
+      end
+
+      it "redirects on create action too" do
+        get :create, project: { github_url: 'foo/bar' }
+        expect(response).to redirect_to(project_confirm_path(url: 'foo/bar'))
+      end
+
+      it "doesn't attempt to add the project" do
         expect(Project.all.length).to eq(0)
 
         get :show, user: 'foo', repo: 'bar'
 
-        expect(Project.all.length).to eq(1)
+        expect(Project.all.length).to eq(0)
       end
+    end
+  end
+
+  describe "GET #confirm" do
+    it "redirects to the proejcts index if the url parameter is missing" do
+      get :confirm
+      expect(response).to redirect_to(projects_path)
+    end
+
+    it "displays a confirmation screen for adding a project" do
+      get :confirm, url: 'foo/bar'
+      expect(response).to have_http_status 200
     end
   end
 end

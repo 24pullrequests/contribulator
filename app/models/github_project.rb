@@ -6,6 +6,12 @@ class GithubProject
     @url = url
   end
 
+  def to_h
+    return {} unless valid_url?
+
+    parse_github_url
+  end
+
   def valid_url?
     GITHUB_URL.match(@url).present? || REPO_URL.match(@url).present?
   end
