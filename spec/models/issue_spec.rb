@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Issue, :type => :model do
+RSpec.describe Issue, type: :model do
   let(:issue) { create(:issue, number: 19663, project: create(:project, name: 'rails', owner: 'rails')) }
 
   %w[github_id url title].each do |required|
