@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe IssuesController, :type => :controller do
+RSpec.describe IssuesController, type: :controller do
   describe "GET #show" do
     let(:issue) { create(:issue) }
 

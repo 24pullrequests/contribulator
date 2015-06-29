@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe PagesController, :type => :controller do
+RSpec.describe PagesController, type: :controller do
   describe "GET #about" do
     let(:issue) { create(:issue, project: create(:project, owner: 'rails', name: 'rails')) }
     let(:project) { issue.project }
