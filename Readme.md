@@ -26,12 +26,12 @@ Vagrant setup.
 
 #### Installing a Local Server
 
-First things first, you'll need to install Ruby 2.2.2. I recommend using the excellent
+First things first, you'll need to install Ruby 2.2.3. I recommend using the excellent
 [rbenv](https://github.com/sstephenson/rbenv) and [ruby-build](https://github.com/sstephenson/ruby-build)
 
 ```bash
-rbenv install 2.2.2
-rbenv global 2.2.2
+rbenv install 2.2.3
+rbenv global 2.2.3
 ```
 
 Next, you'll need to make sure that you have PostgreSQL installed. This can be done easily on OSX using
