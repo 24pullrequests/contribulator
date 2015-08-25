@@ -23,7 +23,7 @@ gem 'faraday-http-cache'
 gem 'github-markup', require: 'github/markup'
 gem 'redcarpet'
 gem 'pg_search'
-gem 'sprockets', '~> 2.12'
+gem 'sprockets'
 
 group :development, :test do
   gem 'rspec-rails'
