@@ -38,7 +38,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (6.0.3)
-    autoprefixer-rails (6.0.3)
+    autoprefixer-rails (6.1.0.1)
       execjs
       json
     binding_of_caller (0.7.2)
@@ -108,7 +108,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    hashdiff (0.2.2)
+    hashdiff (0.2.3)
     hashie (3.4.3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
@@ -122,7 +122,7 @@ GEM
       turbolinks
     json (1.8.3)
     jwt (1.5.2)
-    listen (3.0.3)
+    listen (3.0.4)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     loofah (2.0.3)
@@ -171,7 +171,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (2.14.0)
+    puma (2.15.2)
     rack (1.6.4)
     rack-google-analytics (1.2.0)
       actionpack
@@ -278,7 +278,7 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
-    webmock (1.22.2)
+    webmock (1.22.3)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
