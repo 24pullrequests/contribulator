@@ -17,3 +17,7 @@
 
 .env
 bin/
+
+#Added to not force others to use.
+.overcommit.yml
+.rvmrc
