@@ -250,7 +250,7 @@ GEM
       faraday (~> 0.8, < 0.10)
     shellany (0.0.1)
     slop (3.6.0)
-    spring (1.4.1)
+    spring (1.4.2)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
     sprockets (3.4.0)
