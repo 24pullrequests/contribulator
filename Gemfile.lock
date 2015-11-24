@@ -43,9 +43,9 @@ GEM
       json
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.3.5.1)
-      autoprefixer-rails (>= 5.0.0.1)
-      sass (>= 3.3.0)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     bootswatch-rails (3.3.5)
       railties (>= 3.1)
     bugsnag (2.8.12)
