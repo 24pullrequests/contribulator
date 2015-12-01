@@ -38,7 +38,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (6.0.3)
-    autoprefixer-rails (6.1.1)
+    autoprefixer-rails (6.1.2)
       execjs
       json
     binding_of_caller (0.7.2)
@@ -250,7 +250,7 @@ GEM
       faraday (~> 0.8, < 0.10)
     shellany (0.0.1)
     slop (3.6.0)
-    spring (1.4.4)
+    spring (1.5.0)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
     sprockets (3.4.1)
