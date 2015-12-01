@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/andrew/contribulator.svg?branch=master)](https://travis-ci.org/andrew/contribulator)
 [![Dependency Status](https://img.shields.io/gemnasium/andrew/contribulator.svg?style=flat)](https://gemnasium.com/contribulator/contribulator)
-[![Gitter chat](http://img.shields.io/badge/gitter-andrew--contribulator-brightgreen.svg?style=flat)](https://gitter.im/andrew/contribulator)
+[![Gitter chat](https://img.shields.io/badge/gitter-andrew--contribulator-brightgreen.svg?style=flat)](https://gitter.im/andrew/contribulator)
 
 Find open source projects that are friendly to new contributors and help make your projects more friendly too.
 
@@ -15,8 +15,8 @@ The idea for this project was initially extracted from the Projects section of  
 
 ## Development
 
-- Source hosted at [GitHub](http://github.com/andrew/contribulator).
-- Report issues/feature requests on [GitHub Issues](http://github.com/andrew/contribulator/issues).
+- Source hosted at [GitHub](https://github.com/andrew/contribulator).
+- Report issues/feature requests on [GitHub Issues](https://github.com/andrew/contribulator/issues).
 - Discussion and support on [Gitter](https://gitter.im/andrew/contribulator).
 
 ### Getting Started
@@ -27,7 +27,7 @@ Vagrant setup.
 #### Installing a Local Server
 
 First things first, you'll need to install Ruby 2.2.3. I recommend using the excellent
-[rbenv](https://github.com/sstephenson/rbenv) and [ruby-build](https://github.com/sstephenson/ruby-build)
+[rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build)
 
 ```bash
 rbenv install 2.2.3
@@ -35,7 +35,7 @@ rbenv global 2.2.3
 ```
 
 Next, you'll need to make sure that you have PostgreSQL installed. This can be done easily on OSX using
-[Homebrew](http://mxcl.github.com/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com).
+[Homebrew](http://mxcl.github.io/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com).
 Please see these
 [further instructions for installing Postgres via homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
 
@@ -49,7 +49,7 @@ On Debian-based Linux distributions you can use apt-get to install Postgres:
 sudo apt-get install postgresql postgresql-contrib libpq-dev
 ```
 
-On Windows, you can use the [Chocolatey package manager](http://www.chocolatey.org) to install Postgres:
+On Windows, you can use the [Chocolatey package manager](http://chocolatey.org/) to install Postgres:
 
 ```bash
 choco install postgresql
