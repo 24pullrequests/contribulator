@@ -25,12 +25,15 @@ gem 'redcarpet'
 gem 'pg_search'
 gem 'sprockets'
 
+group :development do
+  gem 'web-console'
+end
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'faker'
-  gem 'web-console'
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-bundler'
