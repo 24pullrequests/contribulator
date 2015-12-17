@@ -1,0 +1,58 @@
+<h2>JSON API</h2>
+
+<p>Follows the <%= link_to '{ json:api }', 'http://jsonapi.org/' %> spec.</p>
+
+<h3>GET Projects</h3>
+
+<pre><code>curl <%= api_projects_url %></code></pre>
+
+<p>Sort by scores</p>
+
+<pre><code>curl <%= api_projects_url(sort: '-score') %></code></pre>
+
+<pre><code>{
+  "data": [
+    {
+      "id": "1",
+      "type": "projects",
+      "links": {
+        "self": "<%= api_project_url(1) %>"
+      },
+      "attributes": {
+        "owner": "24pullrequests",
+        "name": "24pullrequests",
+        "name-with-owner": "24pullrequests/24pullrequests",
+        "github-id": 6673802,
+        "score": 38
+      }
+    }
+  ],
+  "meta": {
+    "total-records": 1
+  },
+  "links": {
+    "first": "<%= api_projects_url %>?page%5Bnumber%5D=1&page%5Bsize%5D=50",
+    "last": "<%= api_projects_url %>?page%5Bnumber%5D=1&page%5Bsize%5D=50"
+  }
+}</code></pre>
+
+<h3>GET Project</h3>
+
+<pre><code>curl <%= api_project_url(1) %></code></pre>
+
+<pre><code>{
+  "data": {
+    "id": "1",
+    "type": "projects",
+    "links": {
+      "self": "<%= api_project_url(1) %>"
+    },
+    "attributes": {
+      "owner": "24pullrequests",
+      "name": "24pullrequests",
+      "name-with-owner": "24pullrequests/24pullrequests",
+      "github-id": 6673802,
+      "score": 38
+    }
+  }
+}</code></pre>

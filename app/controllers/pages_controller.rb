@@ -5,6 +5,8 @@ class PagesController < ApplicationController
     @issue     = @project.issues.sample
   end
 
+  def api; end
+
   private
 
   def github

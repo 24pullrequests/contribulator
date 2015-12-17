@@ -24,6 +24,7 @@ gem 'github-markup', require: 'github/markup'
 gem 'redcarpet'
 gem 'pg_search'
 gem 'sprockets'
+gem 'jsonapi-resources'
 
 group :development do
   gem 'web-console'

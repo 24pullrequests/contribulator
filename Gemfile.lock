@@ -120,6 +120,8 @@ GEM
       railties (>= 3.1.0)
       turbolinks
     json (1.8.3)
+    jsonapi-resources (0.7.0)
+      rails (>= 4.0)
     jwt (1.5.2)
     listen (3.0.5)
       rb-fsevent (>= 0.9.3)
@@ -305,6 +307,7 @@ DEPENDENCIES
   guard-rspec
   jquery-rails
   jquery-turbolinks
+  jsonapi-resources
   newrelic_rpm
   octokit
   omniauth
