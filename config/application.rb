@@ -20,6 +20,8 @@ module Contribulator
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    config.autoload_paths << Rails.root.join('lib/jsonapi')
+
     config.middleware.use Rack::Deflater
 
     # Do not swallow errors in after_commit/after_rollback callbacks.

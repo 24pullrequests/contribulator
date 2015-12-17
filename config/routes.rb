@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   get '/about' => 'pages#about'
+  get '/api' => 'pages#api'
+
+  namespace :api do
+    jsonapi_resources :projects
+  end
 
   get 'issues/:id' => 'issues#show', as: :issue
 
