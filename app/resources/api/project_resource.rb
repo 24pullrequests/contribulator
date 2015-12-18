@@ -7,5 +7,9 @@ module Api
                :name_with_owner,
                :github_id,
                :score
+
+    def self._primary_key
+      :github_id
+    end
   end
 end

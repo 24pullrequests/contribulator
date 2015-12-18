@@ -9,7 +9,7 @@ namespace :projects do
         puts url
         github_project = GithubProject.new(url)
         unless github_project.find
-          github_project.create
+          github_project.create rescue nil
         end
       end
     end
