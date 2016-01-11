@@ -25,6 +25,7 @@ gem 'redcarpet'
 gem 'pg_search'
 gem 'sprockets'
 gem 'jsonapi-resources'
+gem 'sassc-rails'
 
 group :development do
   gem 'web-console'
