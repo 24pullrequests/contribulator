@@ -172,7 +172,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (2.15.3)
+    puma (2.16.0)
     rack (1.6.4)
     rack-google-analytics (1.2.0)
       actionpack
@@ -286,7 +286,7 @@ GEM
       unf_ext
     unf_ext (0.0.7.1)
     vcr (3.0.1)
-    web-console (3.0.0)
+    web-console (3.1.0)
       activemodel (>= 4.2)
       debug_inspector
       railties (>= 4.2)
