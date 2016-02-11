@@ -38,7 +38,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (6.0.3)
-    autoprefixer-rails (6.3.1)
+    autoprefixer-rails (6.3.2)
       execjs
       json
     bootstrap-sass (3.3.6)
@@ -345,5 +345,8 @@ DEPENDENCIES
   will_paginate
   will_paginate-bootstrap
 
+RUBY VERSION
+   ruby 2.3.0p0
+
 BUNDLED WITH
-   1.11.2
+   1.12.0.pre.1
