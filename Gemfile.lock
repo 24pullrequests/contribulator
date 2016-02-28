@@ -56,7 +56,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    concurrent-ruby (1.0.0)
+    concurrent-ruby (1.0.1)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     database_cleaner (1.5.1)
@@ -171,7 +171,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (3.0.1)
+    puma (3.0.2)
     rack (1.6.4)
     rack-google-analytics (1.2.0)
       actionpack
@@ -261,7 +261,7 @@ GEM
       faraday (~> 0.8, < 0.10)
     shellany (0.0.1)
     slop (3.6.0)
-    spring (1.6.3)
+    spring (1.6.4)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
     sprockets (3.5.2)
