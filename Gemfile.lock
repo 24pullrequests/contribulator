@@ -45,7 +45,7 @@ GEM
       sass (>= 3.3.4)
     bootswatch-rails (3.3.5)
       railties (>= 3.1)
-    bugsnag (4.0.0)
+    bugsnag (4.0.1)
     builder (3.2.2)
     coderay (1.1.1)
     coffee-rails (4.1.1)
@@ -170,7 +170,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (3.2.0)
+    puma (3.3.0)
     rack (1.6.4)
     rack-google-analytics (1.2.0)
       actionpack
@@ -248,10 +248,10 @@ GEM
       bundler
       ffi (~> 1.9.6)
       sass (>= 3.3.0)
-    sassc-rails (1.2.0)
+    sassc-rails (1.2.1)
       railties (>= 4.0.0)
       sass
-      sassc (~> 1.6)
+      sassc (~> 1.9)
       sprockets (> 2.11)
       sprockets-rails
       tilt
