@@ -40,6 +40,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-bundler'
   gem 'guard-migrate'
+  gem 'dotenv-rails'
 end
 
 group :production do
