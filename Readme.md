@@ -76,6 +76,16 @@ And we can also add some sample data with the **seed** task
 bundle exec rake db:seed
 ```
 
+Now, we have to create a copy of the `.env.example` file named `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Open this new file and setup your GitHub Access Token (you can generate one [here](https://github.com/settings/tokens)).
+This is needed to avoid "too many requests" errors while the application tries to send requests to the GitHub API (authenticated users
+ have a higher rate limit).
+
 Almost there! Now all we have to do is start up the Rails server and point
 our browser to <http://localhost:3000>
 
