@@ -26,6 +26,7 @@ gem 'pg_search'
 gem 'sprockets'
 gem 'jsonapi-resources'
 gem 'sassc-rails'
+gem 'schema_plus_pg_indexes'
 
 group :development do
   gem 'web-console'

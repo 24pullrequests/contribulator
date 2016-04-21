@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150416194709) do
+ActiveRecord::Schema.define(version: 20160421143043) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,15 +31,16 @@ ActiveRecord::Schema.define(version: 20150416194709) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string   "name"
-    t.string   "owner"
+    t.string   "name",          :index=>{:name=>"index_projects_on_lower_name", :case_sensitive=>false}
+    t.string   "owner",         :index=>{:name=>"index_projects_on_lower_owner", :case_sensitive=>false}
     t.string   "homepage"
-    t.string   "main_language"
+    t.string   "main_language", :index=>{:name=>"index_projects_on_lower_main_language", :case_sensitive=>false}
     t.integer  "github_id"
     t.boolean  "fork",          default: false
-    t.float    "score",         default: 0.0
+    t.float    "score",         :default=>0.0, :index=>{:name=>"index_projects_on_score"}
     t.text     "description"
     t.datetime "last_scored"
+    t.index :name=>"index_projects_on_date_last_scored", :expression=>"date(last_scored)"
   end
 
   create_table "users", force: :cascade do |t|
