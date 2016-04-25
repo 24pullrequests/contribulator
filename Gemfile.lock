@@ -142,7 +142,7 @@ GEM
     modware (0.1.2)
       its-it
       key_struct (~> 0.4)
-    multi_json (1.11.2)
+    multi_json (1.11.3)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     nenv (0.3.0)
