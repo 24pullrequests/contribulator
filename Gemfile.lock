@@ -110,7 +110,7 @@ GEM
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
     hashdiff (0.3.0)
-    hashie (3.4.3)
+    hashie (3.4.4)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
@@ -127,9 +127,10 @@ GEM
       rails (>= 4.0)
     jwt (1.5.1)
     key_struct (0.4.2)
-    listen (3.1.1)
+    listen (3.1.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
+      ruby_dep (~> 1.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.10)
@@ -245,6 +246,7 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    ruby_dep (1.1.0)
     safe_yaml (1.0.4)
     sass (3.4.22)
     sass-rails (5.0.4)
@@ -371,4 +373,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.0
+   1.12.1
