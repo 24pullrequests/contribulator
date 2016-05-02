@@ -138,4 +138,4 @@ https://github.com/andrew/contribulator/graphs/contributors
 
 ## Copyright
 
-Copyright (c) 2015 Andrew Nesbitt. See [LICENSE](https://github.com/andrew/contribulator/blob/master/LICENSE) for details.
+Copyright (c) 2016 Andrew Nesbitt. See [LICENSE](https://github.com/andrew/contribulator/blob/master/LICENSE) for details.
