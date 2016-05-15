@@ -1,6 +1,12 @@
 <h2><%= t('.title') %></h2>
 
 <%= form_for @project, url: {action:'create'} do |f| %>
-  <%= f.text_field :github_url, :value => '', :placeholder => t('github_url') %>
-  <%= f.submit t('.submit') %>
+  <div class="form-group">
+    <%= f.text_field :github_url, value: '', placeholder: t('github_url'),
+      class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit t('.submit'), class: 'btn btn-primary' %>
+  </div>
 <% end %>
