@@ -139,7 +139,7 @@ GEM
     method_source (0.8.2)
     mime-types (2.99.1)
     mini_portile2 (2.0.0)
-    minitest (5.8.4)
+    minitest (5.9.0)
     modware (0.1.2)
       its-it
       key_struct (~> 0.4)
