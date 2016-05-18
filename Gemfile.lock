@@ -127,7 +127,7 @@ GEM
       rails (>= 4.0)
     jwt (1.5.1)
     key_struct (0.4.2)
-    listen (3.1.4)
+    listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
@@ -151,7 +151,7 @@ GEM
     newrelic_rpm (3.15.2.317)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
-    notiffany (0.0.8)
+    notiffany (0.1.0)
       nenv (~> 0.1)
       shellany (~> 0.0)
     oauth2 (1.1.0)
@@ -373,4 +373,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.2
+   1.12.4
