@@ -172,7 +172,7 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     pg (0.18.4)
-    pg_search (1.0.5)
+    pg_search (1.0.6)
       activerecord (>= 3.1)
       activesupport (>= 3.1)
       arel
