@@ -38,7 +38,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (6.0.3)
-    autoprefixer-rails (6.3.6.1)
+    autoprefixer-rails (6.3.6.2)
       execjs
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
@@ -105,7 +105,7 @@ GEM
       activerecord (>= 4.1.0)
       guard (~> 2.3)
       guard-compat (~> 1.1)
-    guard-rspec (4.7.0)
+    guard-rspec (4.7.1)
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
@@ -373,4 +373,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.4
+   1.12.5
