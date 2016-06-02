@@ -105,7 +105,7 @@ GEM
       activerecord (>= 4.1.0)
       guard (~> 2.3)
       guard-compat (~> 1.1)
-    guard-rspec (4.7.1)
+    guard-rspec (4.7.2)
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
@@ -297,7 +297,7 @@ GEM
       sprockets (>= 3.0.0)
     thor (0.19.1)
     thread_safe (0.3.5)
-    tilt (2.0.4)
+    tilt (2.0.5)
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
