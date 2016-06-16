@@ -61,7 +61,7 @@ GEM
     database_cleaner (1.5.3)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
-    domain_name (0.5.20160310)
+    domain_name (0.5.20160615)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.1)
     dotenv-rails (2.1.1)
@@ -310,7 +310,7 @@ GEM
       unf_ext
     unf_ext (0.0.7.2)
     vcr (3.0.3)
-    web-console (3.2.0)
+    web-console (3.3.0)
       activemodel (>= 4.2)
       debug_inspector
       railties (>= 4.2)
