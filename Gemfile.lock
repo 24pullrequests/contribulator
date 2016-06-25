@@ -342,6 +342,7 @@ DEPENDENCIES
   guard-bundler
   guard-migrate
   guard-rspec
+  its-it
   jquery-rails
   jquery-turbolinks
   jsonapi-resources
