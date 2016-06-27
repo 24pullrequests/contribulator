@@ -273,15 +273,15 @@ GEM
     schema_monkey (2.1.5)
       activerecord (>= 4.2)
       modware (~> 0.1)
-    schema_plus_core (1.0.1)
+    schema_plus_core (1.0.2)
       activerecord (~> 4.2)
       its-it (~> 1.2)
       schema_monkey (~> 2.1)
-    schema_plus_indexes (0.2.2)
+    schema_plus_indexes (0.2.3)
       activerecord (~> 4.2)
       its-it (~> 1.2)
       schema_plus_core (~> 1.0)
-    schema_plus_pg_indexes (0.1.11)
+    schema_plus_pg_indexes (0.1.12)
       activerecord (~> 4.2)
       its-it (~> 1.2)
       schema_plus_core (~> 1.0)
@@ -342,7 +342,6 @@ DEPENDENCIES
   guard-bundler
   guard-migrate
   guard-rspec
-  its-it
   jquery-rails
   jquery-turbolinks
   jsonapi-resources
