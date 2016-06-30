@@ -364,7 +364,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   sprockets
-  turbolinks
+  turbolinks (= 2.5.3)
   uglifier
   vcr
   web-console
