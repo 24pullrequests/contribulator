@@ -183,7 +183,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (3.5.0)
+    puma (3.5.2)
     rack (1.6.4)
     rack-google-analytics (1.2.0)
       actionpack
