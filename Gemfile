@@ -23,7 +23,7 @@ gem 'github-markup', require: 'github/markup'
 gem 'redcarpet'
 gem 'pg_search'
 gem 'sprockets'
-gem 'jsonapi-resources'
+gem 'jsonapi-resources', '0.7.0'
 gem 'sassc-rails'
 gem 'schema_plus_pg_indexes'
 

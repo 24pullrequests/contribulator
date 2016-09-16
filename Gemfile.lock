@@ -120,8 +120,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
-    jsonapi-resources (0.8.0)
-      concurrent-ruby
+    jsonapi-resources (0.7.0)
       rails (>= 4.0)
     jwt (1.5.4)
     key_struct (0.4.2)
@@ -344,7 +343,7 @@ DEPENDENCIES
   guard-migrate
   guard-rspec
   jquery-rails
-  jsonapi-resources
+  jsonapi-resources (= 0.7.0)
   newrelic_rpm
   octokit
   omniauth
