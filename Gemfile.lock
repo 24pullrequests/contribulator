@@ -122,7 +122,7 @@ GEM
     json (1.8.3)
     jsonapi-resources (0.7.0)
       rails (>= 4.0)
-    jwt (1.5.5)
+    jwt (1.5.6)
     key_struct (0.4.2)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
