@@ -216,7 +216,7 @@ GEM
       activesupport (= 4.2.7.1)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (11.2.2)
+    rake (11.3.0)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -319,7 +319,7 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
-    will_paginate (3.1.0)
+    will_paginate (3.1.2)
     will_paginate-bootstrap (1.0.1)
       will_paginate (>= 3.0.3)
 
