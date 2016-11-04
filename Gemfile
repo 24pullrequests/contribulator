@@ -8,8 +8,6 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'spring',                 group: :development
-gem 'spring-commands-rspec',  group: :development
 gem 'octokit'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
@@ -29,6 +27,8 @@ gem 'schema_plus_pg_indexes'
 
 group :development do
   gem 'web-console'
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :development, :test do
