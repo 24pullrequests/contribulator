@@ -38,7 +38,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (6.0.3)
-    autoprefixer-rails (6.5.1.1)
+    autoprefixer-rails (6.5.2)
       execjs
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -47,7 +47,7 @@ GEM
       railties (>= 3.1)
     bugsnag (5.0.1)
     builder (3.2.2)
-    codeclimate-test-reporter (1.0.0)
+    codeclimate-test-reporter (1.0.1)
     coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
