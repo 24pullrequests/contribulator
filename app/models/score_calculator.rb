@@ -87,7 +87,7 @@ class ScoreCalculator
   end
 
   def open_issues_created_since(date)
-    Issue.where(created_at: date.to_time.iso8601..Time.now.iso8601).count
+    project.issues.where(created_at: date.to_time.iso8601..Time.now.iso8601).count
   end
 
   def commits_since(date)
