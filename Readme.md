@@ -1,10 +1,10 @@
 # Contribulator
 
-[![Build Status](https://travis-ci.org/andrew/contribulator.svg?branch=master)](https://travis-ci.org/andrew/contribulator)
-[![Dependency Status](https://img.shields.io/gemnasium/andrew/contribulator.svg?style=flat)](https://gemnasium.com/contribulator/contribulator)
-[![Gitter chat](https://img.shields.io/badge/gitter-andrew--contribulator-brightgreen.svg?style=flat)](https://gitter.im/andrew/contribulator)
-[![Code Climate](https://codeclimate.com/github/andrew/contribulator/badges/gpa.svg)](https://codeclimate.com/github/andrew/contribulator)
-[![Test Coverage](https://codeclimate.com/github/andrew/contribulator/badges/coverage.svg)](https://codeclimate.com/github/andrew/contribulator/coverage)
+[![Build Status](https://travis-ci.org/24pullrequests/contribulator.svg?branch=master)](https://travis-ci.org/24pullrequests/contribulator)
+[![Dependency Status](https://img.shields.io/gemnasium/24pullrequests/contribulator.svg?style=flat)](https://gemnasium.com/contribulator/contribulator)
+[![Gitter chat](https://img.shields.io/badge/gitter-andrew--contribulator-brightgreen.svg?style=flat)](https://gitter.im/24pullrequests/contribulator)
+[![Code Climate](https://codeclimate.com/github/24pullrequests/contribulator/badges/gpa.svg)](https://codeclimate.com/github/24pullrequests/contribulator)
+[![Test Coverage](https://codeclimate.com/github/24pullrequests/contribulator/badges/coverage.svg)](https://codeclimate.com/github/24pullrequests/contribulator/coverage)
 
 Find open source projects that are friendly to new contributors and help make your projects more friendly too.
 
@@ -17,9 +17,9 @@ The idea for this project was initially extracted from the Projects section of  
 
 ## Development
 
-- Source hosted at [GitHub](https://github.com/andrew/contribulator).
-- Report issues/feature requests on [GitHub Issues](https://github.com/andrew/contribulator/issues).
-- Discussion and support on [Gitter](https://gitter.im/andrew/contribulator).
+- Source hosted at [GitHub](https://github.com/24pullrequests/contribulator).
+- Report issues/feature requests on [GitHub Issues](https://github.com/24pullrequests/contribulator/issues).
+- Discussion and support on [Gitter](https://gitter.im/24pullrequests/contribulator).
 
 ### Getting Started
 
@@ -136,8 +136,8 @@ this project you agree to abide by its terms.
 ## Contributors
 
 Lots of different people have contributed to this project, you can see them all here:
-https://github.com/andrew/contribulator/graphs/contributors
+https://github.com/24pullrequests/contribulator/graphs/contributors
 
 ## Copyright
 
-Copyright (c) 2016 Andrew Nesbitt. See [LICENSE](https://github.com/andrew/contribulator/blob/master/LICENSE) for details.
+Copyright (c) 2016 Andrew Nesbitt. See [LICENSE](https://github.com/24pullrequests/contribulator/blob/master/LICENSE) for details.
