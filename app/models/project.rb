@@ -75,7 +75,7 @@ class Project < ActiveRecord::Base
     update_attributes(
     github_id:     repo[:id],
     name:          repo[:name],
-    owner:         repo[:owner][:login],
+    owner:         repo.fetch(:owner, {})[:login],
     description:   repo[:description],
     homepage:      format_url(repo[:homepage]),
     fork:          repo[:fork],
