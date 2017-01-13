@@ -84,7 +84,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday-http-cache (2.0.0)
       faraday (~> 0.8)
-    ffi (1.9.14)
+    ffi (1.9.15)
     foreman (0.82.0)
       thor (~> 0.19.1)
     formatador (0.2.5)
