@@ -39,7 +39,7 @@ GEM
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (6.0.4)
-    autoprefixer-rails (6.7.0)
+    autoprefixer-rails (6.7.1)
       execjs
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -88,7 +88,7 @@ GEM
     foreman (0.83.0)
       thor (~> 0.19.1)
     formatador (0.2.5)
-    github-markup (1.4.0)
+    github-markup (1.4.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     guard (2.14.1)
