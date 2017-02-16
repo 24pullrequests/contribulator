@@ -39,7 +39,7 @@ GEM
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (6.0.4)
-    autoprefixer-rails (6.7.2)
+    autoprefixer-rails (6.7.3)
       execjs
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -386,4 +386,4 @@ RUBY VERSION
    ruby 2.3.3p222
 
 BUNDLED WITH
-   1.14.2
+   1.14.4
