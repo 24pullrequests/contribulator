@@ -182,7 +182,7 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     public_suffix (2.0.5)
-    puma (3.7.1)
+    puma (3.8.0)
     rack (1.6.5)
     rack-google-analytics (1.2.0)
       actionpack
@@ -313,7 +313,7 @@ GEM
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.1.5)
+    uglifier (3.1.6)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
