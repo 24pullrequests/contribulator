@@ -346,7 +346,7 @@ DEPENDENCIES
   faker
   faraday-http-cache
   foreman
-  github-markup
+  github-markup (= 1.4.4)
   guard
   guard-bundler
   guard-migrate
