@@ -182,7 +182,7 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     public_suffix (2.0.5)
-    puma (3.8.2)
+    puma (3.9.0)
     rack (1.6.8)
     rack-google-analytics (1.2.0)
       actionpack
