@@ -1,9 +1,6 @@
-require './lib/jsonapi/counting_active_record_operations_processor'
-
 JSONAPI.configure do |config|
   config.json_key_format = :underscored_key
-
-  config.operations_processor = :counting_active_record
+  config.top_level_meta_include_record_count = true
 
   # Pagination
   config.default_paginator = :paged
