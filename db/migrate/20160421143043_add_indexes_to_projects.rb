@@ -1,4 +1,4 @@
-class AddIndexesToProjects < ActiveRecord::Migration
+class AddIndexesToProjects < ActiveRecord::Migration[5.1]
   def change
     change_table :projects do |t|
       t.index :score
