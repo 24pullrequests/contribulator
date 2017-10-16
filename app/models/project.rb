@@ -1,4 +1,4 @@
-class Project < ActiveRecord::Base
+class Project < ApplicationRecord
   include PgSearch
 
   validates :name, :owner, presence: true
