@@ -5,7 +5,7 @@ RSpec.describe IssuesController, type: :controller do
     let(:issue) { create(:issue) }
 
     before do
-        get :show, id: issue.id
+        get :show, params: { id: issue.id }
     end
 
     it "responds successfully with an HTTP 200 status code" do

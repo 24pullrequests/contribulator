@@ -1,4 +1,4 @@
-class Issue < ActiveRecord::Base
+class Issue < ApplicationRecord
   validates :github_id, :url, :title, :number, presence: true
   belongs_to :project
 

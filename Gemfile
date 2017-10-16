@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.4.1'
 
-gem 'rails', '4.2.8'
+gem 'rails', '5.1.4'
 gem 'pg'
 gem 'sass-rails'
 gem 'uglifier'
@@ -21,7 +21,7 @@ gem 'github-markup', require: 'github/markup'
 gem 'redcarpet'
 gem 'pg_search'
 gem 'sprockets'
-gem 'jsonapi-resources', '0.7.0'
+gem 'jsonapi-resources', '0.9.0'
 gem 'sassc-rails'
 gem 'schema_plus_pg_indexes'
 
@@ -41,6 +41,7 @@ group :development, :test do
   gem 'guard-bundler'
   gem 'guard-migrate'
   gem 'dotenv-rails'
+  gem 'rails-controller-testing'
 end
 
 group :production do

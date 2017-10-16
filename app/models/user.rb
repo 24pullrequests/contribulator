@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   def self.create_from_auth_hash(hash)
     create!(AuthHash.new(hash).user_info)
   end
