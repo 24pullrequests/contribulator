@@ -50,8 +50,8 @@ GEM
       railties (>= 3.1)
     bugsnag (5.3.3)
     builder (3.2.3)
-    codeclimate-test-reporter (1.0.8)
-      simplecov (<= 0.13)
+    codeclimate-test-reporter (1.0.7)
+      simplecov
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -303,7 +303,7 @@ GEM
       schema_plus_core (~> 2.0)
       schema_plus_indexes (~> 0.2, >= 0.2.4)
     shellany (0.0.1)
-    simplecov (0.13.0)
+    simplecov (0.15.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
@@ -388,7 +388,7 @@ DEPENDENCIES
   sass-rails
   sassc-rails
   schema_plus_pg_indexes
-  simplecov
+  simplecov (= 0.15.1)
   spring
   spring-commands-rspec
   sprockets
