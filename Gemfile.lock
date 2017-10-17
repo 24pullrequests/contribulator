@@ -116,7 +116,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    hashdiff (0.3.6)
+    hashdiff (0.3.7)
     hashie (3.5.6)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -337,7 +337,7 @@ GEM
       activemodel (>= 4.2)
       debug_inspector
       railties (>= 4.2)
-    webmock (3.0.1)
+    webmock (3.1.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
