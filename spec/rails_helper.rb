@@ -92,5 +92,5 @@ RSpec.configure do |config|
     allow_any_instance_of(Project).to receive(:update_info).and_return(true)
   end
 
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 end

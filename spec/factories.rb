@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :issue do
     sequence :github_id do |n|
       "whatever-#{n}"
