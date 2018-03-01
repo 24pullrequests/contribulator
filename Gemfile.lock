@@ -197,7 +197,7 @@ GEM
     rack-google-analytics (1.2.0)
       actionpack
       activesupport
-    rack-test (0.8.2)
+    rack-test (0.8.3)
       rack (>= 1.0, < 3)
     rails (5.1.4)
       actioncable (= 5.1.4)
