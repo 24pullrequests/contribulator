@@ -28,6 +28,6 @@ FactoryBot.define do
       "#{Faker::Lorem.word}-#{n}"
     end
 
-    score 20
+    score { 20 }
   end
 end
