@@ -183,7 +183,7 @@ GEM
     omniauth-oauth2 (1.5.0)
       oauth2 (~> 1.1)
       omniauth (~> 1.2)
-    pg (0.21.0)
+    pg (1.1.2)
     pg_search (2.1.2)
       activerecord (>= 4.2)
       activesupport (>= 4.2)
@@ -376,7 +376,7 @@ DEPENDENCIES
   octokit
   omniauth
   omniauth-github
-  pg (~> 0.18)
+  pg (~> 1.1)
   pg_search
   puma
   rack-google-analytics
