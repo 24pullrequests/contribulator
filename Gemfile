@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.5.1'
 
 gem 'rails', '5.1.6'
-gem 'pg', '~> 0.18'
+gem 'pg', '~> 1.1'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
