@@ -99,7 +99,7 @@ class ScoreCalculator
   end
 
   def ls
-    @ls ||= github_client.contents(project.repo_id, path: '/')
+    @ls ||= github_client.contents(project.repo_id)
   end
 
   def files
