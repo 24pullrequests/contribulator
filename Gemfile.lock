@@ -289,7 +289,7 @@ GEM
     schema_monkey (2.1.5)
       activerecord (>= 4.2)
       modware (~> 0.1)
-    schema_plus_core (2.2.2)
+    schema_plus_core (2.2.3)
       activerecord (~> 5.0)
       its-it (~> 1.2)
       schema_monkey (~> 2.1)
