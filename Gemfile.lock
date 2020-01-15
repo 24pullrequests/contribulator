@@ -88,7 +88,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday-http-cache (2.0.0)
       faraday (~> 0.8)
-    ffi (1.11.3)
+    ffi (1.12.1)
     foreman (0.87.0)
     formatador (0.2.5)
     github-markup (3.0.4)
