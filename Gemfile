@@ -56,6 +56,5 @@ end
 group :test do
   gem 'vcr'
   gem 'webmock'
-  gem 'simplecov', '0.17.1', require: false
-  gem 'codeclimate-test-reporter', require: false
+  gem 'simplecov', require: false
 end

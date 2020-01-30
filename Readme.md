@@ -3,8 +3,6 @@
 [![Build Status](https://travis-ci.org/24pullrequests/contribulator.svg?branch=master)](https://travis-ci.org/24pullrequests/contribulator)
 [![Dependency Status](https://img.shields.io/gemnasium/24pullrequests/contribulator.svg?style=flat)](https://gemnasium.com/contribulator/contribulator)
 [![Gitter chat](https://img.shields.io/badge/gitter-andrew--contribulator-brightgreen.svg?style=flat)](https://gitter.im/24pullrequests/contribulator)
-[![Code Climate](https://codeclimate.com/github/24pullrequests/contribulator/badges/gpa.svg)](https://codeclimate.com/github/24pullrequests/contribulator)
-[![Test Coverage](https://codeclimate.com/github/24pullrequests/contribulator/badges/coverage.svg)](https://codeclimate.com/github/24pullrequests/contribulator/coverage)
 
 Find open source projects that are friendly to new contributors and help make your projects more friendly too.
 

@@ -52,8 +52,6 @@ GEM
     bugsnag (6.12.2)
       concurrent-ruby (~> 1.0)
     builder (3.2.4)
-    codeclimate-test-reporter (1.0.7)
-      simplecov
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -345,7 +343,6 @@ DEPENDENCIES
   bootstrap-sass
   bootswatch-rails
   bugsnag
-  codeclimate-test-reporter
   coffee-rails
   database_cleaner
   dotenv-rails
@@ -377,7 +374,7 @@ DEPENDENCIES
   sass-rails
   sassc-rails
   schema_plus_pg_indexes
-  simplecov (= 0.17.1)
+  simplecov
   spring
   spring-commands-rspec
   sprockets
@@ -393,4 +390,4 @@ RUBY VERSION
    ruby 2.5.3p105
 
 BUNDLED WITH
-   1.17.1
+   1.17.3
