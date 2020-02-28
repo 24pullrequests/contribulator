@@ -114,7 +114,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    hashdiff (1.0.0)
+    hashdiff (1.0.1)
     hashie (3.6.0)
     http-accept (1.7.0)
     http-cookie (1.0.3)
