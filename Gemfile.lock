@@ -180,7 +180,7 @@ GEM
     omniauth-oauth2 (1.6.0)
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
-    pg (1.2.2)
+    pg (1.2.3)
     pg_search (2.3.0)
       activerecord (>= 4.2)
       activesupport (>= 4.2)
