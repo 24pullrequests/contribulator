@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
-gem 'rails', '5.1.6.2'
+gem 'rails', '5.2.4.2'
 gem 'pg', '~> 1.2'
 gem 'sass-rails'
 gem 'uglifier'
@@ -20,10 +20,9 @@ gem 'faraday-http-cache'
 gem 'github-markup', require: 'github/markup'
 gem 'redcarpet'
 gem 'pg_search'
-gem 'sprockets'
+gem 'sprockets', '< 4.0.0'
 gem 'jsonapi-resources', '0.9.0'
 gem 'sassc-rails'
-gem 'schema_plus_pg_indexes'
 
 group :development do
   gem 'web-console'
