@@ -87,7 +87,7 @@ GEM
     faraday-http-cache (2.1.0)
       faraday (~> 0.8)
     ffi (1.12.2)
-    foreman (0.87.0)
+    foreman (0.87.1)
     formatador (0.2.5)
     github-markup (3.0.4)
     globalid (0.4.2)
