@@ -101,8 +101,8 @@ GEM
       pry (>= 0.9.12)
       shellany (~> 0.0)
       thor (>= 0.18.1)
-    guard-bundler (2.2.1)
-      bundler (>= 1.3.0, < 3)
+    guard-bundler (3.0.0)
+      bundler (>= 2.1, < 3)
       guard (~> 2.2)
       guard-compat (~> 1.1)
     guard-compat (1.2.1)
@@ -375,7 +375,7 @@ DEPENDENCIES
   simplecov
   spring
   spring-commands-rspec
-  sprockets
+  sprockets (< 4.0.0)
   turbolinks
   uglifier
   vcr
@@ -386,3 +386,6 @@ DEPENDENCIES
 
 RUBY VERSION
    ruby 2.7.1p105
+
+BUNDLED WITH
+   2.1.4
