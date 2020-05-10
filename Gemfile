@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.7.1'
 
-gem 'rails', '5.1.6.2'
+gem 'rails', '5.2.4.2'
 gem 'pg', '~> 1.2'
 gem 'sass-rails'
 gem 'uglifier'
@@ -23,7 +23,6 @@ gem 'pg_search'
 gem 'sprockets', '< 4.0.0'
 gem 'jsonapi-resources', '0.9.0'
 gem 'sassc-rails'
-gem 'schema_plus_pg_indexes'
 
 group :development do
   gem 'web-console'

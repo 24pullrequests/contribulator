@@ -1,11 +1,12 @@
 class AddIndexesToProjects < ActiveRecord::Migration[5.1]
   def change
-    change_table :projects do |t|
-      t.index :score
-      t.index expression: 'lower(name)', name: 'index_projects_on_lower_name'
-      t.index expression: 'lower(owner)', name: 'index_projects_on_lower_owner'
-      t.index expression: 'lower(main_language)', name: 'index_projects_on_lower_main_language'
-      t.index expression: 'date(last_scored)', name: 'index_projects_on_date_last_scored'
-    end
+    add_index :projects, :score
+    add_index :projects, 'lower(name)', name: 'index_projects_on_lower_name'
+    add_index :projects, 'lower(owner)', name: 'index_projects_on_lower_owner'
+    add_index :projects, 'lower(main_language)', name: 'index_projects_on_lower_main_language'
+    add_index :projects, 'date(last_scored)', name: 'index_projects_on_date_last_scored'
+
+
+    
   end
 end
