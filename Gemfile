@@ -35,10 +35,6 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'database_cleaner'
   gem 'faker'
-  gem 'guard'
-  gem 'guard-rspec'
-  gem 'guard-bundler'
-  gem 'guard-migrate'
   gem 'dotenv-rails'
   gem 'rails-controller-testing'
 end
