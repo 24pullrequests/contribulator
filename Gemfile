@@ -20,7 +20,7 @@ gem 'faraday-http-cache'
 gem 'github-markup', require: 'github/markup'
 gem 'redcarpet'
 gem 'pg_search'
-gem 'sprockets', '< 4.0.0'
+gem 'sprockets', '< 5.0.0'
 gem 'jsonapi-resources', '0.9.0'
 gem 'sassc-rails'
 
