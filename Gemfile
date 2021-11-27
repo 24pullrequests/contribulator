@@ -23,6 +23,7 @@ gem 'pg_search'
 gem 'sprockets', '< 4.0.0'
 gem 'jsonapi-resources', '0.9.0'
 gem 'sassc-rails'
+gem 'faraday', '1.7.0'
 
 group :development do
   gem 'web-console'
