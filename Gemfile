@@ -21,7 +21,7 @@ gem 'github-markup', require: 'github/markup'
 gem 'redcarpet'
 gem 'pg_search'
 gem 'sprockets', '< 4.0.0'
-gem 'jsonapi-resources', '0.9.0'
+gem 'jsonapi-resources', '0.10.5'
 gem 'sassc-rails'
 gem 'faraday', '1.7.0'
 
