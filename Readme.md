@@ -1,6 +1,5 @@
 # Contribulator
 
-[![Build Status](https://travis-ci.org/24pullrequests/contribulator.svg?branch=master)](https://travis-ci.org/24pullrequests/contribulator)
 [![Dependency Status](https://img.shields.io/gemnasium/24pullrequests/contribulator.svg?style=flat)](https://gemnasium.com/contribulator/contribulator)
 [![Gitter chat](https://img.shields.io/badge/gitter-andrew--contribulator-brightgreen.svg?style=flat)](https://gitter.im/24pullrequests/contribulator)
 
