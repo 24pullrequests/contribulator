@@ -169,7 +169,6 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     netrc (0.11.0)
-    newrelic_rpm (8.1.0)
     nio4r (2.5.8)
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
@@ -351,7 +350,6 @@ DEPENDENCIES
   jquery-rails
   jsonapi-resources
   listen
-  newrelic_rpm
   octokit
   omniauth
   omniauth-github
