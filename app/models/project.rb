@@ -72,7 +72,7 @@ class Project < ApplicationRecord
   private
 
   def update_from_github
-    update_attributes(
+    update(
     github_id:     repo[:id],
     name:          repo[:name],
     owner:         repo.to_attrs.fetch(:owner, {})[:login],
@@ -97,7 +97,7 @@ class Project < ApplicationRecord
   end
 
   def update_score
-    update_attributes score: calculator.score, last_scored: Time.now
+    update score: calculator.score, last_scored: Time.now
   end
 
   def calculator

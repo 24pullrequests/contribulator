@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.7.1'
 
-gem 'rails', '6.0.3.4'
+gem 'rails', '6.1.4.1'
 gem 'pg', '~> 1.2'
 gem 'sass-rails'
 gem 'uglifier'
@@ -21,7 +21,7 @@ gem 'github-markup', require: 'github/markup'
 gem 'redcarpet'
 gem 'pg_search'
 gem 'sprockets', '< 4.0.0'
-gem 'jsonapi-resources', '0.9.0'
+gem 'jsonapi-resources'
 gem 'sassc-rails'
 gem 'faraday', '1.7.0'
 

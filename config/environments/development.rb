@@ -15,9 +15,6 @@ Rails.application.configure do
   # Enable/disable caching. By default caching is disabled.
   config.action_controller.perform_caching = false
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
-
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

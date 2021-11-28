@@ -15,7 +15,7 @@ class User < ApplicationRecord
     # do not update the email address in case the user has updated their
     # email prefs and used a new email
     ignored_fields = %i(email name blog location)
-    update_attributes(AuthHash.new(hash).user_info.except(*ignored_fields))
+    update(AuthHash.new(hash).user_info.except(*ignored_fields))
   end
 
   def self.find_by_auth_hash(hash)
