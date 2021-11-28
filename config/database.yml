@@ -59,6 +59,8 @@ test:
   <<: *default
   database: contribulator_test
   host: localhost
+  username: <%= ENV.fetch('POSTGRES_USER') { '' } %>
+  password: <%= ENV.fetch('POSTGRES_PASSWORD') { '' } %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
