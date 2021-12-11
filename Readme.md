@@ -1,8 +1,5 @@
 # Contribulator
 
-[![Dependency Status](https://img.shields.io/gemnasium/24pullrequests/contribulator.svg?style=flat)](https://gemnasium.com/contribulator/contribulator)
-[![Gitter chat](https://img.shields.io/badge/gitter-andrew--contribulator-brightgreen.svg?style=flat)](https://gitter.im/24pullrequests/contribulator)
-
 Find open source projects that are friendly to new contributors and help make your projects more friendly too.
 
 A score is calculated for each project based on a number of good practices to encourage more contributors.
